@@ -1,0 +1,245 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Node gradients -->
+    <linearGradient id="rootGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="branchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#50c878;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#228b22;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="proofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb347;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow -->
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" fill="#ff6b9d" font-size="20" font-weight="bold" font-family="monospace">
+    Polkadot Radix-16 Merkle-Patricia Trie
+  </text>
+  
+  <!-- Root Node -->
+  <g id="root">
+    <rect x="560" y="60" width="80" height="60" rx="8" fill="url(#rootGrad)" filter="url(#shadow)"/>
+    <text x="600" y="82" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="monospace">ROOT</text>
+    <text x="600" y="95" text-anchor="middle" fill="#fff" font-size="6" font-family="monospace">0x9f7a...</text>
+    <text x="600" y="108" text-anchor="middle" fill="#fff" font-size="6" font-family="monospace">State Hash</text>
+  </g>
+  
+  <!-- Level 1 Branch Nodes -->
+  <g id="level1">
+    <!-- Branch 0 -->
+    <rect x="200" y="160" width="60" height="50" rx="6" fill="url(#branchGrad)" filter="url(#shadow)"/>
+    <text x="230" y="178" text-anchor="middle" fill="white" font-size="7" font-weight="bold" font-family="monospace">0x0</text>
+    <text x="230" y="190" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">0x8a4b...</text>
+    <text x="230" y="200" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">Branch</text>
+    
+    <!-- Branch 1 -->
+    <rect x="300" y="160" width="60" height="50" rx="6" fill="url(#branchGrad)" filter="url(#shadow)"/>
+    <text x="330" y="178" text-anchor="middle" fill="white" font-size="7" font-weight="bold" font-family="monospace">0x1</text>
+    <text x="330" y="190" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">0x7c3d...</text>
+    <text x="330" y="200" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">Branch</text>
+    
+    <!-- Branch A (highlighted in proof path) -->
+    <rect x="820" y="160" width="60" height="50" rx="6" fill="url(#proofGrad)" filter="url(#glow)"/>
+    <text x="850" y="178" text-anchor="middle" fill="black" font-size="7" font-weight="bold" font-family="monospace">0xA</text>
+    <text x="850" y="190" text-anchor="middle" fill="black" font-size="5" font-family="monospace">0x5e2f...</text>
+    <text x="850" y="200" text-anchor="middle" fill="black" font-size="5" font-family="monospace">Branch</text>
+    
+    <!-- Branch F -->
+    <rect x="920" y="160" width="60" height="50" rx="6" fill="url(#branchGrad)" filter="url(#shadow)"/>
+    <text x="950" y="178" text-anchor="middle" fill="white" font-size="7" font-weight="bold" font-family="monospace">0xF</text>
+    <text x="950" y="190" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">0x1d9e...</text>
+    <text x="950" y="200" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">Branch</text>
+  </g>
+  
+  <!-- Level 2 Branch Nodes -->
+  <g id="level2">
+    <!-- Under 0x0 -->
+    <rect x="160" y="260" width="50" height="40" rx="5" fill="url(#branchGrad)" filter="url(#shadow)"/>
+    <text x="185" y="275" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="monospace">0x01</text>
+    <text x="185" y="285" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">0x6f1a...</text>
+    <text x="185" y="295" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">Branch</text>
+    
+    <rect x="220" y="260" width="50" height="40" rx="5" fill="url(#branchGrad)" filter="url(#shadow)"/>
+    <text x="245" y="275" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="monospace">0x09</text>
+    <text x="245" y="285" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">0x4e8c...</text>
+    <text x="245" y="295" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">Branch</text>
+    
+    <!-- Under 0xA (proof path) -->
+    <rect x="780" y="260" width="50" height="40" rx="5" fill="url(#proofGrad)" filter="url(#glow)"/>
+    <text x="805" y="275" text-anchor="middle" fill="black" font-size="6" font-weight="bold" font-family="monospace">0xA3</text>
+    <text x="805" y="285" text-anchor="middle" fill="black" font-size="4" font-family="monospace">0x2b4d...</text>
+    <text x="805" y="295" text-anchor="middle" fill="black" font-size="4" font-family="monospace">Branch</text>
+    
+    <rect x="840" y="260" width="50" height="40" rx="5" fill="url(#branchGrad)" filter="url(#shadow)"/>
+    <text x="865" y="275" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="monospace">0xAF</text>
+    <text x="865" y="285" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">0x7a9b...</text>
+    <text x="865" y="295" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">Branch</text>
+  </g>
+  
+  <!-- Leaf Nodes -->
+  <g id="leaves">
+    <!-- Regular leaves -->
+    <rect x="140" y="360" width="70" height="45" rx="5" fill="url(#leafGrad)" filter="url(#shadow)"/>
+    <text x="175" y="375" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="monospace">0x0123</text>
+    <text x="175" y="385" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">balance: 1000</text>
+    <text x="175" y="395" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">Value: 0xde4f...</text>
+    
+    <rect x="220" y="360" width="70" height="45" rx="5" fill="url(#leafGrad)" filter="url(#shadow)"/>
+    <text x="255" y="375" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="monospace">0x0987</text>
+    <text x="255" y="385" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">nonce: 42</text>
+    <text x="255" y="395" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">Value: 0xa1b2...</text>
+    
+    <!-- Proof target leaf -->
+    <rect x="760" y="360" width="70" height="45" rx="5" fill="url(#proofGrad)" filter="url(#glow)"/>
+    <text x="795" y="375" text-anchor="middle" fill="black" font-size="6" font-weight="bold" font-family="monospace">0xA3B7</text>
+    <text x="795" y="385" text-anchor="middle" fill="black" font-size="4" font-family="monospace">storage: data</text>
+    <text x="795" y="395" text-anchor="middle" fill="black" font-size="4" font-family="monospace">Value: 0x9c8e...</text>
+    
+    <rect x="840" y="360" width="70" height="45" rx="5" fill="url(#leafGrad)" filter="url(#shadow)"/>
+    <text x="875" y="375" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="monospace">0xAF12</text>
+    <text x="875" y="385" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">code: 0x6080...</text>
+    <text x="875" y="395" text-anchor="middle" fill="#fff" font-size="4" font-family="monospace">Value: 0x3f7a...</text>
+  </g>
+  
+  <!-- Connections -->
+  <g id="connections" stroke="#4a90e2" stroke-width="2" fill="none">
+    <!-- Root to Level 1 -->
+    <line x1="600" y1="120" x2="230" y2="160"/>
+    <line x1="600" y1="120" x2="330" y2="160"/>
+    <line x1="600" y1="120" x2="850" y2="160"/>
+    <line x1="600" y1="120" x2="950" y2="160"/>
+    
+    <!-- Level 1 to Level 2 -->
+    <line x1="230" y1="210" x2="185" y2="260"/>
+    <line x1="230" y1="210" x2="245" y2="260"/>
+    <line x1="850" y1="210" x2="805" y2="260"/>
+    <line x1="850" y1="210" x2="865" y2="260"/>
+    
+    <!-- Level 2 to Leaves -->
+    <line x1="185" y1="300" x2="175" y2="360"/>
+    <line x1="245" y1="300" x2="255" y2="360"/>
+    <line x1="805" y1="300" x2="795" y2="360"/>
+    <line x1="865" y1="300" x2="875" y2="360"/>
+  </g>
+  
+  <!-- Proof path highlight -->
+  <g id="proofPath" stroke="#ffd700" stroke-width="3" fill="none" opacity="0.8">
+    <line x1="600" y1="120" x2="850" y2="160"/>
+    <line x1="850" y1="210" x2="805" y2="260"/>
+    <line x1="805" y1="300" x2="795" y2="360"/>
+  </g>
+  
+  <!-- Nibbles explanation -->
+  <g id="nibbles">
+    <rect x="50" y="450" width="300" height="120" rx="8" fill="#2d3748" stroke="#4a90e2" stroke-width="1"/>
+    <text x="60" y="470" fill="#ff6b9d" font-size="12" font-weight="bold" font-family="monospace">Nibbles (4-bit values)</text>
+    
+    <text x="60" y="490" fill="#e0e0e0" font-size="10" font-family="monospace">Key: 0xA3B7 = [A, 3, B, 7]</text>
+    <text x="60" y="505" fill="#e0e0e0" font-size="8" font-family="monospace">A = 1010, 3 = 0011, B = 1011, 7 = 0111</text>
+    
+    <text x="60" y="525" fill="#50c878" font-size="9" font-family="monospace">Path traversal:</text>
+    <text x="60" y="540" fill="#e0e0e0" font-size="8" font-family="monospace">Root → 0xA → 0xA3 → 0xA3B7 (leaf)</text>
+    
+    <text x="60" y="560" fill="#ffd700" font-size="9" font-family="monospace">Radix-16: Each node has up to 16 children</text>
+  </g>
+  
+  <!-- Merkle proof explanation -->
+  <g id="merkleProof">
+    <rect x="400" y="450" width="350" height="120" rx="8" fill="#2d3748" stroke="#4a90e2" stroke-width="1"/>
+    <text x="410" y="470" fill="#ff6b9d" font-size="12" font-weight="bold" font-family="monospace">Merkle Proof Verification</text>
+    
+    <text x="410" y="490" fill="#e0e0e0" font-size="10" font-family="monospace">To verify 0xA3B7 value:</text>
+    <text x="410" y="505" fill="#ffd700" font-size="9" font-family="monospace">1. Hash(leaf_value + children_hashes)</text>
+    <text x="410" y="520" fill="#ffd700" font-size="9" font-family="monospace">2. Hash(0xA3_value + computed_hash)</text>
+    <text x="410" y="535" fill="#ffd700" font-size="9" font-family="monospace">3. Hash(0xA_value + computed_hash)</text>
+    <text x="410" y="550" fill="#ffd700" font-size="9" font-family="monospace">4. Compare with known root hash</text>
+    
+    <text x="410" y="565" fill="#50c878" font-size="8" font-family="monospace">✓ O(log₁₆(N)) complexity for verification</text>
+  </g>
+  
+  <!-- State update explanation -->
+  <g id="stateUpdate">
+    <rect x="800" y="450" width="350" height="120" rx="8" fill="#2d3748" stroke="#4a90e2" stroke-width="1"/>
+    <text x="810" y="470" fill="#ff6b9d" font-size="12" font-weight="bold" font-family="monospace">Efficient State Updates</text>
+    
+    <text x="810" y="490" fill="#e0e0e0" font-size="10" font-family="monospace">When 0xA3B7 value changes:</text>
+    <text x="810" y="505" fill="#e74c3c" font-size="9" font-family="monospace">1. Update leaf node Merkle value</text>
+    <text x="810" y="520" fill="#e74c3c" font-size="9" font-family="monospace">2. Recalculate 0xA3 branch hash</text>
+    <text x="810" y="535" fill="#e74c3c" font-size="9" font-family="monospace">3. Recalculate 0xA branch hash</text>
+    <text x="810" y="550" fill="#e74c3c" font-size="9" font-family="monospace">4. Recalculate root hash</text>
+    
+    <text x="810" y="565" fill="#50c878" font-size="8" font-family="monospace">✓ Only ancestors need recalculation</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="50" y="600" width="400" height="80" rx="8" fill="#2d3748" stroke="#4a90e2" stroke-width="1"/>
+    <text x="60" y="620" fill="#ff6b9d" font-size="12" font-weight="bold" font-family="monospace">Legend</text>
+    
+    <rect x="60" y="630" width="15" height="15" fill="url(#rootGrad)"/>
+    <text x="80" y="642" fill="#e0e0e0" font-size="9" font-family="monospace">Root Node (State Hash)</text>
+    
+    <rect x="60" y="650" width="15" height="15" fill="url(#branchGrad)"/>
+    <text x="80" y="662" fill="#e0e0e0" font-size="9" font-family="monospace">Branch Node (Intermediate)</text>
+    
+    <rect x="220" y="630" width="15" height="15" fill="url(#leafGrad)"/>
+    <text x="240" y="642" fill="#e0e0e0" font-size="9" font-family="monospace">Leaf Node (Key-Value)</text>
+    
+    <rect x="220" y="650" width="15" height="15" fill="url(#proofGrad)"/>
+    <text x="240" y="662" fill="#e0e0e0" font-size="9" font-family="monospace">Proof Path (Highlighted)</text>
+  </g>
+  
+  <!-- Performance note -->
+  <g id="performance">
+    <rect x="500" y="600" width="650" height="80" rx="8" fill="#2d3748" stroke="#4a90e2" stroke-width="1"/>
+    <text x="510" y="620" fill="#ff6b9d" font-size="12" font-weight="bold" font-family="monospace">Performance Characteristics</text>
+    
+    <text x="510" y="640" fill="#50c878" font-size="9" font-family="monospace">• Lookup: O(log₁₆(N)) - logarithmic search time</text>
+    <text x="510" y="655" fill="#50c878" font-size="9" font-family="monospace">• Insert/Update: O(log₁₆(N)) - only ancestor recalculation</text>
+    <text x="510" y="670" fill="#50c878" font-size="9" font-family="monospace">• Proof Size: O(log₁₆(N)) - compact verification path</text>
+    
+    <text x="780" y="640" fill="#4a90e2" font-size="9" font-family="monospace">• Enables light clients</text>
+    <text x="780" y="655" fill="#4a90e2" font-size="9" font-family="monospace">• Cross-chain verification</text>
+    <text x="780" y="670" fill="#4a90e2" font-size="9" font-family="monospace">• Substrate framework</text>
+  </g>
+  
+  <!-- Hash examples -->
+  <g id="hashExamples">
+    <text x="60" y="750" fill="#666" font-size="7" font-family="monospace">Hash examples are truncated for display. Actual hashes are 256-bit values.</text>
+    <text x="60" y="765" fill="#666" font-size="7" font-family="monospace">Polkadot uses BLAKE2b hashing for Merkle value computation.</text>
+    <text x="60" y="780" fill="#666" font-size="7" font-family="monospace">State root represents the complete blockchain state at a given block height.</text>
+  </g>
+</svg>

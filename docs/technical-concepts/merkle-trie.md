@@ -33,3 +33,5 @@
 - Merkle proofs are not merely a cryptographic primitive; they are a fundamental enabler of light client functionality and trustless cross-chain communication within Polkadot's state machine architecture.
 - By allowing efficient verification of state subsets, they significantly reduce the computational burden on nodes, particularly light clients, and facilitate secure interactions between different parts of the network without necessitating full state replication.
 - This capability is directly relevant to how cross-chain messaging (XCMP) verifies state transitions across different parachains.
+
+![Patricia Merkle Tree](../../images/merkle-patricia-trie.svg)

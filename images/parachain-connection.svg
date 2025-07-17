@@ -297,7 +297,7 @@
     <!-- Validator -->
     <circle cx="80" cy="475" r="8" fill="#fff" stroke="#e6007a" stroke-width="1"/>
     <text x="80" y="479" text-anchor="middle" fill="#e6007a" font-size="6">V</text>
-    <text x="95" y="479" fill="#ccc" font-size="11">Validator (Security & Finality)</text>
+    <text x="95" y="479" fill="#ccc" font-size="11">Validator (Security &amp; Finality)</text>
   </g>
   
   <!-- Key Properties -->

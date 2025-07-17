@@ -1,0 +1,378 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="700" y="30" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="20" font-weight="bold">
+    Polkadot Host ↔ Runtime Architecture &amp; Interaction
+  </text>
+  
+  <!-- Host Section (Left) -->
+  <rect x="50" y="70" width="600" height="750" fill="#1a1a2e" stroke="#00d4ff" stroke-width="3" rx="10"/>
+  <text x="350" y="100" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="18" font-weight="bold">
+    POLKADOT HOST
+  </text>
+  <text x="350" y="120" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12">
+    Execution Environment • Node Services • Static Infrastructure
+  </text>
+  
+  <!-- Networking Stack -->
+  <rect x="70" y="140" width="560" height="80" fill="#16213e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="350" y="165" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">
+    NETWORKING STACK (libp2p)
+  </text>
+  <text x="80" y="185" fill="#ffffff" font-family="monospace" font-size="10">
+    • Peer Discovery &amp; Connection Management
+  </text>
+  <text x="80" y="200" fill="#ffffff" font-family="monospace" font-size="10">
+    • Block Propagation &amp; Gossip Protocol
+  </text>
+  <text x="350" y="185" fill="#ffffff" font-family="monospace" font-size="10">
+    • Network Transport Layer
+  </text>
+  <text x="350" y="200" fill="#ffffff" font-family="monospace" font-size="10">
+    • Parachain Networking
+  </text>
+  
+  <!-- Consensus Engine -->
+  <rect x="70" y="240" width="560" height="80" fill="#16213e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="350" y="265" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">
+    CONSENSUS ENGINE
+  </text>
+  <text x="80" y="285" fill="#ffffff" font-family="monospace" font-size="10">
+    • BABE (Block Authoring): VRF-based slot selection
+  </text>
+  <text x="80" y="300" fill="#ffffff" font-family="monospace" font-size="10">
+    • GRANDPA (Finality): Byzantine fault-tolerant finality
+  </text>
+  
+  <!-- State Storage Layer -->
+  <rect x="70" y="340" width="560" height="100" fill="#16213e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="350" y="365" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">
+    STATE STORAGE LAYER
+  </text>
+  <text x="80" y="385" fill="#ffffff" font-family="monospace" font-size="10">
+    • Merkle-Patricia Trie Structure
+  </text>
+  <text x="80" y="400" fill="#ffffff" font-family="monospace" font-size="10">
+    • Database Backend (RocksDB/ParityDB)
+  </text>
+  <text x="80" y="415" fill="#ffffff" font-family="monospace" font-size="10">
+    • State Root Calculation &amp; Verification
+  </text>
+  <text x="350" y="385" fill="#ffffff" font-family="monospace" font-size="10">
+    • Storage Optimization
+  </text>
+  <text x="350" y="400" fill="#ffffff" font-family="monospace" font-size="10">
+    • Pruning &amp; Archival
+  </text>
+  <text x="350" y="415" fill="#ffffff" font-family="monospace" font-size="10">
+    • State Snapshots
+  </text>
+  
+  <!-- WASM Interpreter -->
+  <rect x="70" y="460" width="560" height="80" fill="#16213e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="350" y="485" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">
+    WASM INTERPRETER &amp; VIRTUAL MACHINE
+  </text>
+  <text x="80" y="505" fill="#ffffff" font-family="monospace" font-size="10">
+    • Wasmtime/Wasmer Execution Engine
+  </text>
+  <text x="80" y="520" fill="#ffffff" font-family="monospace" font-size="10">
+    • Sandboxed Runtime Environment
+  </text>
+  <text x="350" y="505" fill="#ffffff" font-family="monospace" font-size="10">
+    • Memory Management
+  </text>
+  <text x="350" y="520" fill="#ffffff" font-family="monospace" font-size="10">
+    • Deterministic Execution
+  </text>
+  
+  <!-- Cryptographic Primitives -->
+  <rect x="70" y="560" width="560" height="80" fill="#16213e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="350" y="585" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">
+    CRYPTOGRAPHIC PRIMITIVES
+  </text>
+  <text x="80" y="605" fill="#ffffff" font-family="monospace" font-size="10">
+    • Hash Functions (Blake2, Keccak, SHA2)
+  </text>
+  <text x="80" y="620" fill="#ffffff" font-family="monospace" font-size="10">
+    • Digital Signatures (sr25519, ed25519, ECDSA)
+  </text>
+  <text x="350" y="605" fill="#ffffff" font-family="monospace" font-size="10">
+    • VRF (Verifiable Random Function)
+  </text>
+  <text x="350" y="620" fill="#ffffff" font-family="monospace" font-size="10">
+    • Merkle Proof Generation
+  </text>
+  
+  <!-- Host Functions -->
+  <rect x="70" y="660" width="560" height="120" fill="#0f1419" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="350" y="685" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">
+    HOST FUNCTIONS (sp_io)
+  </text>
+  <text x="80" y="705" fill="#ffffff" font-family="monospace" font-size="10">
+    • storage_set() / storage_get() - State R/W
+  </text>
+  <text x="80" y="720" fill="#ffffff" font-family="monospace" font-size="10">
+    • ext_crypto_* - Cryptographic Operations
+  </text>
+  <text x="80" y="735" fill="#ffffff" font-family="monospace" font-size="10">
+    • timestamp_now() - Block Timestamp
+  </text>
+  <text x="80" y="750" fill="#ffffff" font-family="monospace" font-size="10">
+    • log() - Debug Output
+  </text>
+  <text x="350" y="705" fill="#ffffff" font-family="monospace" font-size="10">
+    • offchain_* - Off-chain Operations
+  </text>
+  <text x="350" y="720" fill="#ffffff" font-family="monospace" font-size="10">
+    • trie_* - Trie Operations
+  </text>
+  <text x="350" y="735" fill="#ffffff" font-family="monospace" font-size="10">
+    • misc_* - Utility Functions
+  </text>
+  <text x="350" y="750" fill="#ffffff" font-family="monospace" font-size="10">
+    • allocator_* - Memory Management
+  </text>
+  
+  <!-- Runtime Section (Right) -->
+  <rect x="750" y="70" width="600" height="750" fill="#1a2e1a" stroke="#00ff88" stroke-width="3" rx="10"/>
+  <text x="1050" y="100" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="18" font-weight="bold">
+    POLKADOT RUNTIME
+  </text>
+  <text x="1050" y="120" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12">
+    State Transition Function • WASM Binary • Dynamic Upgradable
+  </text>
+  
+  <!-- WASM Meta Protocol -->
+  <rect x="770" y="140" width="560" height="60" fill="#2e4d2e" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="1050" y="165" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">
+    WASM META PROTOCOL
+  </text>
+  <text x="1050" y="185" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10">
+    Runtime stored on-chain as WASM bytecode • Forkless upgrades
+  </text>
+  
+  <!-- FRAME System -->
+  <rect x="770" y="220" width="560" height="80" fill="#2e4d2e" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="1050" y="245" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">
+    FRAME (Framework for Runtime Aggregation)
+  </text>
+  <text x="780" y="265" fill="#ffffff" font-family="monospace" font-size="10">
+    • Modular Runtime Construction
+  </text>
+  <text x="780" y="280" fill="#ffffff" font-family="monospace" font-size="10">
+    • Rust-based Libraries &amp; Macros
+  </text>
+  <text x="1050" y="265" fill="#ffffff" font-family="monospace" font-size="10">
+    • Pallet System Architecture
+  </text>
+  <text x="1050" y="280" fill="#ffffff" font-family="monospace" font-size="10">
+    • Custom STF Composition
+  </text>
+  
+  <!-- Core Pallets -->
+  <rect x="770" y="320" width="270" height="160" fill="#2e4d2e" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="905" y="345" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="12" font-weight="bold">
+    CORE PALLETS
+  </text>
+  <text x="780" y="365" fill="#ffffff" font-family="monospace" font-size="9">
+    • System - Basic blockchain functionality
+  </text>
+  <text x="780" y="380" fill="#ffffff" font-family="monospace" font-size="9">
+    • Timestamp - Block timestamp
+  </text>
+  <text x="780" y="395" fill="#ffffff" font-family="monospace" font-size="9">
+    • Balances - Account balances
+  </text>
+  <text x="780" y="410" fill="#ffffff" font-family="monospace" font-size="9">
+    • Transaction Payment - Fee logic
+  </text>
+  <text x="780" y="425" fill="#ffffff" font-family="monospace" font-size="9">
+    • Sudo - Superuser access
+  </text>
+  <text x="780" y="440" fill="#ffffff" font-family="monospace" font-size="9">
+    • Indices - Account indices
+  </text>
+  <text x="780" y="455" fill="#ffffff" font-family="monospace" font-size="9">
+    • Randomness Collective Flip
+  </text>
+  
+  <!-- Governance Pallets -->
+  <rect x="1060" y="320" width="270" height="160" fill="#2e4d2e" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="1195" y="345" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="12" font-weight="bold">
+    GOVERNANCE PALLETS
+  </text>
+  <text x="1070" y="365" fill="#ffffff" font-family="monospace" font-size="9">
+    • Democracy - Referendum system
+  </text>
+  <text x="1070" y="380" fill="#ffffff" font-family="monospace" font-size="9">
+    • Council - Elected representatives
+  </text>
+  <text x="1070" y="395" fill="#ffffff" font-family="monospace" font-size="9">
+    • Technical Committee
+  </text>
+  <text x="1070" y="410" fill="#ffffff" font-family="monospace" font-size="9">
+    • Treasury - Fund management
+  </text>
+  <text x="1070" y="425" fill="#ffffff" font-family="monospace" font-size="9">
+    • Elections - Voting mechanisms
+  </text>
+  <text x="1070" y="440" fill="#ffffff" font-family="monospace" font-size="9">
+    • Collective - Group decisions
+  </text>
+  <text x="1070" y="455" fill="#ffffff" font-family="monospace" font-size="9">
+    • Membership - Role management
+  </text>
+  
+  <!-- Consensus Pallets -->
+  <rect x="770" y="500" width="270" height="120" fill="#2e4d2e" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="905" y="525" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="12" font-weight="bold">
+    CONSENSUS PALLETS
+  </text>
+  <text x="780" y="545" fill="#ffffff" font-family="monospace" font-size="9">
+    • Babe - Block authoring
+  </text>
+  <text x="780" y="560" fill="#ffffff" font-family="monospace" font-size="9">
+    • Grandpa - Finality gadget
+  </text>
+  <text x="780" y="575" fill="#ffffff" font-family="monospace" font-size="9">
+    • AuthorityDiscovery - Validator discovery
+  </text>
+  <text x="780" y="590" fill="#ffffff" font-family="monospace" font-size="9">
+    • Offences - Slashing logic
+  </text>
+  <text x="780" y="605" fill="#ffffff" font-family="monospace" font-size="9">
+    • Session - Validator session management
+  </text>
+  
+  <!-- Parachain Pallets -->
+  <rect x="1060" y="500" width="270" height="120" fill="#2e4d2e" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="1195" y="525" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="12" font-weight="bold">
+    PARACHAIN PALLETS
+  </text>
+  <text x="1070" y="545" fill="#ffffff" font-family="monospace" font-size="9">
+    • Paras - Parachain registry
+  </text>
+  <text x="1070" y="560" fill="#ffffff" font-family="monospace" font-size="9">
+    • Hrmp - Horizontal message passing
+  </text>
+  <text x="1070" y="575" fill="#ffffff" font-family="monospace" font-size="9">
+    • Ump - Upward message passing
+  </text>
+  <text x="1070" y="590" fill="#ffffff" font-family="monospace" font-size="9">
+    • Dmp - Downward message passing
+  </text>
+  <text x="1070" y="605" fill="#ffffff" font-family="monospace" font-size="9">
+    • Xcm - Cross-chain messaging
+  </text>
+  
+  <!-- Runtime APIs -->
+  <rect x="770" y="640" width="560" height="120" fill="#0f1419" stroke="#00ff88" stroke-width="2" rx="5"/>
+  <text x="1050" y="665" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">
+    RUNTIME APIs (sp_api)
+  </text>
+  <text x="780" y="685" fill="#ffffff" font-family="monospace" font-size="10">
+    • Core::execute_block() - Block execution
+  </text>
+  <text x="780" y="700" fill="#ffffff" font-family="monospace" font-size="10">
+    • Metadata::metadata() - Runtime metadata
+  </text>
+  <text x="780" y="715" fill="#ffffff" font-family="monospace" font-size="10">
+    • BlockBuilder::* - Block construction
+  </text>
+  <text x="780" y="730" fill="#ffffff" font-family="monospace" font-size="10">
+    • TaggedTransactionQueue::* - TX validation
+  </text>
+  <text x="780" y="745" fill="#ffffff" font-family="monospace" font-size="10">
+    • OffchainWorkerApi::* - Off-chain work
+  </text>
+  <text x="1050" y="685" fill="#ffffff" font-family="monospace" font-size="10">
+    • ParachainHost::* - Parachain ops
+  </text>
+  <text x="1050" y="700" fill="#ffffff" font-family="monospace" font-size="10">
+    • GrandpaApi::* - Finality queries
+  </text>
+  <text x="1050" y="715" fill="#ffffff" font-family="monospace" font-size="10">
+    • BabeApi::* - Consensus queries
+  </text>
+  <text x="1050" y="730" fill="#ffffff" font-family="monospace" font-size="10">
+    • AccountNonceApi::* - Account nonce
+  </text>
+  <text x="1050" y="745" fill="#ffffff" font-family="monospace" font-size="10">
+    • TransactionPaymentApi::* - Fee calc
+  </text>
+  
+  <!-- Communication Interface -->
+  <rect x="670" y="300" width="60" height="400" fill="#2e2e2e" stroke="#ffffff" stroke-width="2" rx="5"/>
+  <text x="700" y="325" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">
+    I/F
+  </text>
+  
+  <!-- Host Functions Arrow -->
+  <path d="M 630 400 L 670 400" stroke="#ff6b35" stroke-width="3" fill="none" marker-end="url(#arrowhead-orange)"/>
+  <text x="650" y="390" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="10" font-weight="bold">
+    Host Functions
+  </text>
+  <text x="650" y="415" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">
+    WASM → Host
+  </text>
+  
+  <!-- Runtime APIs Arrow -->
+  <path d="M 730 600 L 770 600" stroke="#ff6b35" stroke-width="3" fill="none" marker-end="url(#arrowhead-orange)"/>
+  <text x="750" y="590" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="10" font-weight="bold">
+    Runtime APIs
+  </text>
+  <text x="750" y="615" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">
+    Host → WASM
+  </text>
+  
+  <!-- Block Execution Flow -->
+  <rect x="200" y="850" width="1000" height="40" fill="#16213e" stroke="#ffffff" stroke-width="1" rx="5"/>
+  <text x="700" y="875" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">
+    BLOCK EXECUTION FLOW: Node receives block → Fetches parent state → Loads Runtime WASM → execute_block() → State update → Verify state root
+  </text>
+  
+  <!-- Key Characteristics -->
+  <rect x="50" y="780" width="280" height="60" fill="#0f1419" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="190" y="800" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="11" font-weight="bold">
+    HOST CHARACTERISTICS
+  </text>
+  <text x="60" y="815" fill="#ffffff" font-family="monospace" font-size="9">
+    • Static infrastructure (minimal changes)
+  </text>
+  <text x="60" y="830" fill="#ffffff" font-family="monospace" font-size="9">
+    • Node services &amp; execution environment
+  </text>
+  
+  <rect x="1070" y="780" width="280" height="60" fill="#0f1419" stroke="#00ff88" stroke-width="1" rx="3"/>
+  <text x="1210" y="800" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="11" font-weight="bold">
+    RUNTIME CHARACTERISTICS
+  </text>
+  <text x="1080" y="815" fill="#ffffff" font-family="monospace" font-size="9">
+    • Dynamic upgradability (forkless)
+  </text>
+  <text x="1080" y="830" fill="#ffffff" font-family="monospace" font-size="9">
+    • Business logic &amp; state transitions
+  </text>
+  
+  <!-- Separation Benefits -->
+  <rect x="380" y="780" width="640" height="60" fill="#0f1419" stroke="#ffffff" stroke-width="1" rx="3"/>
+  <text x="700" y="800" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold">
+    ARCHITECTURAL SEPARATION BENEFITS
+  </text>
+  <text x="390" y="815" fill="#ffffff" font-family="monospace" font-size="9">
+    • Forkless upgrades • Deterministic execution • Sandboxed environment • Platform portability
+  </text>
+  <text x="390" y="830" fill="#ffffff" font-family="monospace" font-size="9">
+    • Modular development • Independent evolution • Long-term adaptability • Future-proof design
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b35"/>
+    </marker>
+  </defs>
+</svg>

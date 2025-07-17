@@ -14,4 +14,4 @@
 - This cryptographic linkage creates a tamper-proof history, making any unauthorized alteration immediately detectable and thereby ensuring the integrity of all state transitions.
 - The formal definition of a blockchain as a Discrete State Machine is central to understanding Polkadot's architecture, as it shifts the perspective from a mere "chain of blocks" to a system where every valid block represents a new, agreed-upon global state, derived deterministically from the previous state and the block's inputs.
 
-![Blockchain State Machine](./blockchain-state-machine.svg)
+![Blockchain State Machine](../../images/blockchain-state-machine.svg)

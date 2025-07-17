@@ -1,0 +1,307 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="800" y="30" text-anchor="middle" fill="#e6007a" font-size="28" font-weight="bold">Parachains as Specialized, Interoperable State Machines</text>
+  
+  <!-- Relay Chain Core -->
+  <g id="relay-chain-core">
+    <rect x="600" y="400" width="400" height="150" fill="#e6007a" stroke="#ff1493" stroke-width="3" rx="15"/>
+    <text x="800" y="430" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Polkadot Relay Chain</text>
+    <text x="800" y="450" text-anchor="middle" fill="white" font-size="14">Shared Security • Global Finality • Consensus</text>
+    
+    <!-- Validator Set -->
+    <rect x="620" y="470" width="360" height="40" fill="#cc0066" stroke="#ff1493" stroke-width="1" rx="5"/>
+    <text x="800" y="485" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Robust Validator Set (NPoS)</text>
+    <text x="800" y="500" text-anchor="middle" fill="white" font-size="10">Provides finality for ALL connected parachains</text>
+    
+    <!-- Validator nodes -->
+    <g id="validators">
+      <circle cx="650" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="650" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₁</text>
+      <circle cx="700" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="700" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₂</text>
+      <circle cx="750" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="750" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₃</text>
+      <circle cx="800" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="800" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₄</text>
+      <circle cx="850" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="850" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₅</text>
+      <circle cx="900" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="900" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₆</text>
+      <circle cx="950" cy="525" r="10" fill="#fff" stroke="#e6007a" stroke-width="2"/>
+      <text x="950" y="529" text-anchor="middle" fill="#e6007a" font-size="8">V₇</text>
+    </g>
+  </g>
+  
+  <!-- Parachain 1: DeFi -->
+  <g id="parachain-defi">
+    <rect x="50" y="150" width="200" height="180" fill="#00d4ff" stroke="#0099cc" stroke-width="3" rx="12"/>
+    <text x="150" y="175" text-anchor="middle" fill="white" font-size="16" font-weight="bold">DeFi Parachain</text>
+    <text x="150" y="195" text-anchor="middle" fill="white" font-size="12">Layer-1 Specialized Chain</text>
+    
+    <!-- State Machine Specialization -->
+    <rect x="60" y="205" width="180" height="50" fill="#006699" stroke="#0099cc" stroke-width="1" rx="5"/>
+    <text x="150" y="220" text-anchor="middle" fill="white" font-size="11" font-weight="bold">State Machine δ_DeFi</text>
+    <text x="150" y="235" text-anchor="middle" fill="white" font-size="9">Optimized for: AMM, Lending, Yield</text>
+    <text x="150" y="248" text-anchor="middle" fill="white" font-size="9">Native Token: DEFI</text>
+    
+    <!-- Collators -->
+    <rect x="60" y="265" width="180" height="30" fill="#004466" stroke="#0099cc" stroke-width="1" rx="3"/>
+    <text x="150" y="278" text-anchor="middle" fill="white" font-size="10">Block Authoring (Collators)</text>
+    <text x="150" y="290" text-anchor="middle" fill="white" font-size="8">Controls HOW blocks are authored</text>
+    
+    <!-- Governance -->
+    <rect x="60" y="300" width="180" height="20" fill="#002233" stroke="#0099cc" stroke-width="1" rx="3"/>
+    <text x="150" y="313" text-anchor="middle" fill="white" font-size="9">Custom Governance Process</text>
+    
+    <!-- Collator nodes -->
+    <circle cx="80" cy="275" r="6" fill="#fff" stroke="#00d4ff" stroke-width="1"/>
+    <text x="80" y="278" text-anchor="middle" fill="#00d4ff" font-size="5">C</text>
+    <circle cx="100" cy="275" r="6" fill="#fff" stroke="#00d4ff" stroke-width="1"/>
+    <text x="100" y="278" text-anchor="middle" fill="#00d4ff" font-size="5">C</text>
+    <circle cx="120" cy="275" r="6" fill="#fff" stroke="#00d4ff" stroke-width="1"/>
+    <text x="120" y="278" text-anchor="middle" fill="#00d4ff" font-size="5">C</text>
+  </g>
+  
+  <!-- Parachain 2: Gaming -->
+  <g id="parachain-gaming">
+    <rect x="300" y="150" width="200" height="180" fill="#9d4edd" stroke="#7b2cbf" stroke-width="3" rx="12"/>
+    <text x="400" y="175" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Gaming Parachain</text>
+    <text x="400" y="195" text-anchor="middle" fill="white" font-size="12">Layer-1 Specialized Chain</text>
+    
+    <!-- State Machine Specialization -->
+    <rect x="310" y="205" width="180" height="50" fill="#6a1b9a" stroke="#7b2cbf" stroke-width="1" rx="5"/>
+    <text x="400" y="220" text-anchor="middle" fill="white" font-size="11" font-weight="bold">State Machine δ_Gaming</text>
+    <text x="400" y="235" text-anchor="middle" fill="white" font-size="9">Optimized for: NFTs, Fast TPS, Assets</text>
+    <text x="400" y="248" text-anchor="middle" fill="white" font-size="9">Native Token: GAME</text>
+    
+    <!-- Collators -->
+    <rect x="310" y="265" width="180" height="30" fill="#4a148c" stroke="#7b2cbf" stroke-width="1" rx="3"/>
+    <text x="400" y="278" text-anchor="middle" fill="white" font-size="10">Block Authoring (Collators)</text>
+    <text x="400" y="290" text-anchor="middle" fill="white" font-size="8">Controls HOW blocks are authored</text>
+    
+    <!-- Governance -->
+    <rect x="310" y="300" width="180" height="20" fill="#2e0845" stroke="#7b2cbf" stroke-width="1" rx="3"/>
+    <text x="400" y="313" text-anchor="middle" fill="white" font-size="9">Custom Governance Process</text>
+    
+    <!-- Collator nodes -->
+    <circle cx="330" cy="275" r="6" fill="#fff" stroke="#9d4edd" stroke-width="1"/>
+    <text x="330" y="278" text-anchor="middle" fill="#9d4edd" font-size="5">C</text>
+    <circle cx="350" cy="275" r="6" fill="#fff" stroke="#9d4edd" stroke-width="1"/>
+    <text x="350" y="278" text-anchor="middle" fill="#9d4edd" font-size="5">C</text>
+    <circle cx="370" cy="275" r="6" fill="#fff" stroke="#9d4edd" stroke-width="1"/>
+    <text x="370" y="278" text-anchor="middle" fill="#9d4edd" font-size="5">C</text>
+  </g>
+  
+  <!-- Parachain 3: Identity -->
+  <g id="parachain-identity">
+    <rect x="1100" y="150" width="200" height="180" fill="#ff6b35" stroke="#e55100" stroke-width="3" rx="12"/>
+    <text x="1200" y="175" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Identity Parachain</text>
+    <text x="1200" y="195" text-anchor="middle" fill="white" font-size="12">Layer-1 Specialized Chain</text>
+    
+    <!-- State Machine Specialization -->
+    <rect x="1110" y="205" width="180" height="50" fill="#d84315" stroke="#e55100" stroke-width="1" rx="5"/>
+    <text x="1200" y="220" text-anchor="middle" fill="white" font-size="11" font-weight="bold">State Machine δ_Identity</text>
+    <text x="1200" y="235" text-anchor="middle" fill="white" font-size="9">Optimized for: KYC, Privacy, Auth</text>
+    <text x="1200" y="248" text-anchor="middle" fill="white" font-size="9">Native Token: ID</text>
+    
+    <!-- Collators -->
+    <rect x="1110" y="265" width="180" height="30" fill="#bf360c" stroke="#e55100" stroke-width="1" rx="3"/>
+    <text x="1200" y="278" text-anchor="middle" fill="white" font-size="10">Block Authoring (Collators)</text>
+    <text x="1200" y="290" text-anchor="middle" fill="white" font-size="8">Controls HOW blocks are authored</text>
+    
+    <!-- Governance -->
+    <rect x="1110" y="300" width="180" height="20" fill="#8d2f04" stroke="#e55100" stroke-width="1" rx="3"/>
+    <text x="1200" y="313" text-anchor="middle" fill="white" font-size="9">Custom Governance Process</text>
+    
+    <!-- Collator nodes -->
+    <circle cx="1130" cy="275" r="6" fill="#fff" stroke="#ff6b35" stroke-width="1"/>
+    <text x="1130" y="278" text-anchor="middle" fill="#ff6b35" font-size="5">C</text>
+    <circle cx="1150" cy="275" r="6" fill="#fff" stroke="#ff6b35" stroke-width="1"/>
+    <text x="1150" y="278" text-anchor="middle" fill="#ff6b35" font-size="5">C</text>
+    <circle cx="1170" cy="275" r="6" fill="#fff" stroke="#ff6b35" stroke-width="1"/>
+    <text x="1170" y="278" text-anchor="middle" fill="#ff6b35" font-size="5">C</text>
+  </g>
+  
+  <!-- Parachain 4: Private Chain -->
+  <g id="parachain-private">
+    <rect x="1350" y="150" width="200" height="180" fill="#4caf50" stroke="#2e7d32" stroke-width="3" rx="12"/>
+    <text x="1450" y="175" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Private Parachain</text>
+    <text x="1450" y="195" text-anchor="middle" fill="white" font-size="12">Layer-1 Specialized Chain</text>
+    
+    <!-- State Machine Specialization -->
+    <rect x="1360" y="205" width="180" height="50" fill="#388e3c" stroke="#2e7d32" stroke-width="1" rx="5"/>
+    <text x="1450" y="220" text-anchor="middle" fill="white" font-size="11" font-weight="bold">State Machine δ_Private</text>
+    <text x="1450" y="235" text-anchor="middle" fill="white" font-size="9">Optimized for: Enterprise, Compliance</text>
+    <text x="1450" y="248" text-anchor="middle" fill="white" font-size="9">Native Token: PRIV</text>
+    
+    <!-- Collators -->
+    <rect x="1360" y="265" width="180" height="30" fill="#2e7d32" stroke="#2e7d32" stroke-width="1" rx="3"/>
+    <text x="1450" y="278" text-anchor="middle" fill="white" font-size="10">Block Authoring (Collators)</text>
+    <text x="1450" y="290" text-anchor="middle" fill="white" font-size="8">Restricted Access</text>
+    
+    <!-- Governance -->
+    <rect x="1360" y="300" width="180" height="20" fill="#1b5e20" stroke="#2e7d32" stroke-width="1" rx="3"/>
+    <text x="1450" y="313" text-anchor="middle" fill="white" font-size="9">Private Governance</text>
+    
+    <!-- Access Control -->
+    <rect x="1360" y="325" width="180" height="15" fill="#0d2818" stroke="#2e7d32" stroke-width="1" rx="3"/>
+    <text x="1450" y="335" text-anchor="middle" fill="white" font-size="8">🔒 Access Control</text>
+  </g>
+  
+  <!-- Parachain 5: General Smart Contracts -->
+  <g id="parachain-contracts">
+    <rect x="50" y="700" width="200" height="180" fill="#ffb300" stroke="#ff8f00" stroke-width="3" rx="12"/>
+    <text x="150" y="725" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Smart Contract</text>
+    <text x="150" y="740" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Parachain</text>
+    <text x="150" y="760" text-anchor="middle" fill="white" font-size="12">Layer-1 Specialized Chain</text>
+    
+    <!-- State Machine Specialization -->
+    <rect x="60" y="770" width="180" height="50" fill="#f57c00" stroke="#ff8f00" stroke-width="1" rx="5"/>
+    <text x="150" y="785" text-anchor="middle" fill="white" font-size="11" font-weight="bold">State Machine δ_Contract</text>
+    <text x="150" y="800" text-anchor="middle" fill="white" font-size="9">Optimized for: WASM, EVM, Ink!</text>
+    <text x="150" y="813" text-anchor="middle" fill="white" font-size="9">Native Token: CONTRACT</text>
+    
+    <!-- Collators -->
+    <rect x="60" y="830" width="180" height="30" fill="#e65100" stroke="#ff8f00" stroke-width="1" rx="3"/>
+    <text x="150" y="843" text-anchor="middle" fill="white" font-size="10">Block Authoring (Collators)</text>
+    <text x="150" y="855" text-anchor="middle" fill="white" font-size="8">Controls HOW blocks are authored</text>
+    
+    <!-- Governance -->
+    <rect x="60" y="865" width="180" height="20" fill="#bf360c" stroke="#ff8f00" stroke-width="1" rx="3"/>
+    <text x="150" y="878" text-anchor="middle" fill="white" font-size="9">Custom Governance Process</text>
+  </g>
+  
+  <!-- Parachain 6: IoT -->
+  <g id="parachain-iot">
+    <rect x="1350" y="700" width="200" height="180" fill="#607d8b" stroke="#455a64" stroke-width="3" rx="12"/>
+    <text x="1450" y="725" text-anchor="middle" fill="white" font-size="16" font-weight="bold">IoT Parachain</text>
+    <text x="1450" y="745" text-anchor="middle" fill="white" font-size="12">Layer-1 Specialized Chain</text>
+    
+    <!-- State Machine Specialization -->
+    <rect x="1360" y="755" width="180" height="50" fill="#546e7a" stroke="#455a64" stroke-width="1" rx="5"/>
+    <text x="1450" y="770" text-anchor="middle" fill="white" font-size="11" font-weight="bold">State Machine δ_IoT</text>
+    <text x="1450" y="785" text-anchor="middle" fill="white" font-size="9">Optimized for: Sensors, Micro-tx</text>
+    <text x="1450" y="798" text-anchor="middle" fill="white" font-size="9">Native Token: IOT</text>
+    
+    <!-- Collators -->
+    <rect x="1360" y="815" width="180" height="30" fill="#455a64" stroke="#455a64" stroke-width="1" rx="3"/>
+    <text x="1450" y="828" text-anchor="middle" fill="white" font-size="10">Block Authoring (Collators)</text>
+    <text x="1450" y="840" text-anchor="middle" fill="white" font-size="8">Lightweight nodes</text>
+    
+    <!-- Governance -->
+    <rect x="1360" y="850" width="180" height="20" fill="#263238" stroke="#455a64" stroke-width="1" rx="3"/>
+    <text x="1450" y="863" text-anchor="middle" fill="white" font-size="9">Automated Governance</text>
+  </g>
+  
+  <!-- Connection Lines and Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e6007a"/>
+    </marker>
+    <marker id="arrowhead-security" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b"/>
+    </marker>
+    <marker id="arrowhead-finality" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00ff88"/>
+    </marker>
+  </defs>
+  
+  <!-- Connections to Relay Chain -->
+  <g id="connections">
+    <!-- Security lines (red) -->
+    <line x1="250" y1="240" x2="600" y2="450" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    <line x1="500" y1="240" x2="600" y2="450" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    <line x1="1100" y1="240" x2="1000" y2="450" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    <line x1="1350" y1="240" x2="1000" y2="450" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    <line x1="250" y1="790" x2="600" y2="550" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    <line x1="1350" y1="790" x2="1000" y2="550" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    
+    <!-- Finality lines (green) -->
+    <line x1="600" y1="450" x2="250" y2="240" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+    <line x1="600" y1="450" x2="500" y2="240" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+    <line x1="1000" y1="450" x2="1100" y2="240" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+    <line x1="1000" y1="450" x2="1350" y2="240" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+    <line x1="600" y1="550" x2="250" y2="790" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+    <line x1="1000" y1="550" x2="1350" y2="790" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+  </g>
+  
+  <!-- Coretime Allocation -->
+  <g id="coretime">
+    <rect x="550" y="600" width="500" height="100" fill="#2a1a2a" stroke="#4a3a4a" stroke-width="2" rx="10"/>
+    <text x="800" y="625" text-anchor="middle" fill="#ffaa00" font-size="18" font-weight="bold">Coretime Allocation</text>
+    <text x="800" y="645" text-anchor="middle" fill="#ccc" font-size="12">Parachains purchase coretime using DOT tokens</text>
+    
+    <!-- Coretime options -->
+    <rect x="570" y="655" width="200" height="30" fill="#4a3a4a" stroke="#6a5a5a" stroke-width="1" rx="5"/>
+    <text x="670" y="673" text-anchor="middle" fill="#ccc" font-size="11">Dedicated Slot (Auction)</text>
+    
+    <rect x="790" y="655" width="200" height="30" fill="#4a3a4a" stroke="#6a5a5a" stroke-width="1" rx="5"/>
+    <text x="890" y="673" text-anchor="middle" fill="#ccc" font-size="11">Pay-as-you-go (On-demand)</text>
+  </g>
+  
+  <!-- Shared Security Explanation -->
+  <g id="shared-security">
+    <rect x="50" y="50" width="350" height="80" fill="#1a1a2a" stroke="#3a3a4a" stroke-width="2" rx="10"/>
+    <text x="225" y="75" text-anchor="middle" fill="#ff6b6b" font-size="16" font-weight="bold">Shared Security Model</text>
+    <text x="60" y="95" fill="#ccc" font-size="12">• Relay Chain validators secure ALL parachains</text>
+    <text x="60" y="110" fill="#ccc" font-size="12">• No independent NPoS or consensus per parachain</text>
+    <text x="60" y="125" fill="#888" font-size="11">Trade-off: Robust security vs. ceded finality control</text>
+  </g>
+  
+  <!-- Global Finality -->
+  <g id="global-finality">
+    <rect x="1200" y="50" width="350" height="80" fill="#1a2a1a" stroke="#3a4a3a" stroke-width="2" rx="10"/>
+    <text x="1375" y="75" text-anchor="middle" fill="#00ff88" font-size="16" font-weight="bold">Global Finality</text>
+    <text x="1210" y="95" fill="#ccc" font-size="12">• Relay Chain provides finality for all parachains</text>
+    <text x="1210" y="110" fill="#ccc" font-size="12">• If Relay Chain reverts → All parachains revert</text>
+    <text x="1210" y="125" fill="#888" font-size="11">Ensures global consistency across state machines</text>
+  </g>
+  
+  <!-- Heterogeneous Nature -->
+  <g id="heterogeneous">
+    <rect x="600" y="50" width="400" height="80" fill="#2a1a1a" stroke="#4a3a3a" stroke-width="2" rx="10"/>
+    <text x="800" y="75" text-anchor="middle" fill="#9d4edd" font-size="16" font-weight="bold">Heterogeneous State Machines</text>
+    <text x="610" y="95" fill="#ccc" font-size="12">• Each parachain optimized for specific use cases</text>
+    <text x="610" y="110" fill="#ccc" font-size="12">• Custom state transition functions δ_specialized</text>
+    <text x="610" y="125" fill="#888" font-size="11">Addresses "one-size-fits-all" limitation of monolithic chains</text>
+  </g>
+  
+  <!-- Interoperability -->
+  <g id="interoperability">
+    <rect x="600" y="750" width="400" height="60" fill="#1a1a2a" stroke="#3a3a4a" stroke-width="2" rx="10"/>
+    <text x="800" y="775" text-anchor="middle" fill="#ffaa00" font-size="16" font-weight="bold">Cross-Chain Interoperability</text>
+    <text x="800" y="795" text-anchor="middle" fill="#ccc" font-size="12">XCM enables seamless communication between specialized chains</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="50" y="380" width="400" height="120" fill="#1a1a1a" stroke="#333" stroke-width="1" rx="5"/>
+    <text x="60" y="400" fill="white" font-size="14" font-weight="bold">Legend</text>
+    
+    <!-- Security flow -->
+    <line x1="70" y1="415" x2="100" y2="415" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowhead-security)"/>
+    <text x="110" y="419" fill="#ccc" font-size="11">Shared Security (Relay Chain → Parachains)</text>
+    
+    <!-- Finality flow -->
+    <line x1="70" y1="435" x2="100" y2="435" stroke="#00ff88" stroke-width="2" marker-end="url(#arrowhead-finality)"/>
+    <text x="110" y="439" fill="#ccc" font-size="11">Global Finality (Relay Chain → Parachains)</text>
+    
+    <!-- Collator -->
+    <circle cx="80" cy="455" r="6" fill="#fff" stroke="#00d4ff" stroke-width="1"/>
+    <text x="80" y="458" text-anchor="middle" fill="#00d4ff" font-size="5">C</text>
+    <text x="95" y="459" fill="#ccc" font-size="11">Collator (Block Authoring)</text>
+    
+    <!-- Validator -->
+    <circle cx="80" cy="475" r="8" fill="#fff" stroke="#e6007a" stroke-width="1"/>
+    <text x="80" y="479" text-anchor="middle" fill="#e6007a" font-size="6">V</text>
+    <text x="95" y="479" fill="#ccc" font-size="11">Validator (Security & Finality)</text>
+  </g>
+  
+  <!-- Key Properties -->
+  <text x="800" y="950" text-anchor="middle" fill="#888" font-size="12">Application-Specific Optimization • Independent Native Tokens • Custom Governance • Shared Security • Global Finality</text>
+  <text x="800" y="970" text-anchor="middle" fill="#666" font-size="10">Each parachain = Independent Layer-1 blockchain with specialized state transition function</text>
+  <text x="800" y="990" text-anchor="middle" fill="#666" font-size="10">Interconnected network of heterogeneous state machines under unified security model</text>
+</svg>

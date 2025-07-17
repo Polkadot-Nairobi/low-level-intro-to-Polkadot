@@ -228,9 +228,9 @@
     <text x="510" y="620" fill="#ff6b9d" font-size="12" font-weight="bold" font-family="monospace">Performance Characteristics</text>
 
         
-    <text x="780" y="640" fill="#4a90e2" font-size="9" font-family="monospace">• Enables light clients</text>
-    <text x="780" y="655" fill="#4a90e2" font-size="9" font-family="monospace">• Cross-chain verification</text>
-    <text x="780" y="670" fill="#4a90e2" font-size="9" font-family="monospace">• Substrate framework</text>
+    <text x="830" y="640" fill="#4a90e2" font-size="9" font-family="monospace">• Enables light clients</text>
+    <text x="830" y="655" fill="#4a90e2" font-size="9" font-family="monospace">• Cross-chain verification</text>
+    <text x="830" y="670" fill="#4a90e2" font-size="9" font-family="monospace">• Substrate framework</text>
     
     <text x="510" y="640" fill="#50c878" font-size="9" font-family="monospace">• Lookup: O(log₁₆(N)) - logarithmic search time</text>
     <text x="510" y="655" fill="#50c878" font-size="9" font-family="monospace">• Insert/Update: O(log₁₆(N)) - only ancestor recalculation</text>

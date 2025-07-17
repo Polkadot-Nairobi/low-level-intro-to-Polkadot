@@ -1,0 +1,345 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18" font-weight="bold">
+    Parachains vs Parathreads Architecture
+  </text>
+  
+  <!-- Relay Chain (Central) -->
+  <rect x="400" y="60" width="400" height="80" fill="#e6007a" stroke="#ffffff" stroke-width="2" rx="5"/>
+  <text x="600" y="85" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">
+    POLKADOT RELAY CHAIN
+  </text>
+  <text x="600" y="100" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10">
+    Validators • Consensus • Shared Security
+  </text>
+  <text x="600" y="115" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10">
+    Candidate Backing Subsystem
+  </text>
+  <text x="600" y="130" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10">
+    Global State Coordination
+  </text>
+  
+  <!-- Parachains Section -->
+  <text x="200" y="180" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="16" font-weight="bold">
+    PARACHAINS
+  </text>
+  <text x="200" y="195" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="11">
+    Dedicated Slot • Continuous Execution
+  </text>
+  
+  <!-- Parachain 1 -->
+  <rect x="50" y="220" width="130" height="120" fill="#1a1a2e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="115" y="240" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="11" font-weight="bold">
+    Parachain A
+  </text>
+  <text x="115" y="255" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    Runtime/STF
+  </text>
+  <text x="115" y="270" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    State Machine
+  </text>
+  
+  <!-- Collator A -->
+  <rect x="60" y="285" width="110" height="40" fill="#16213e" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="115" y="300" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">
+    Collator A
+  </text>
+  <text x="115" y="315" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="8">
+    Full Node • TX Exec • PoV
+  </text>
+  
+  <!-- Parachain 2 -->
+  <rect x="220" y="220" width="130" height="120" fill="#1a1a2e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <text x="285" y="240" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="11" font-weight="bold">
+    Parachain B
+  </text>
+  <text x="285" y="255" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    Runtime/STF
+  </text>
+  <text x="285" y="270" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    State Machine
+  </text>
+  
+  <!-- Collator B -->
+  <rect x="230" y="285" width="110" height="40" fill="#16213e" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="285" y="300" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">
+    Collator B
+  </text>
+  <text x="285" y="315" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="8">
+    Full Node • TX Exec • PoV
+  </text>
+  
+  <!-- Parachain characteristics -->
+  <rect x="50" y="360" width="300" height="80" fill="#0f1419" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="200" y="380" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">
+    PARACHAIN CHARACTERISTICS
+  </text>
+  <text x="60" y="395" fill="#ffffff" font-family="monospace" font-size="9">
+    • Dedicated slot lease (fixed cost)
+  </text>
+  <text x="60" y="408" fill="#ffffff" font-family="monospace" font-size="9">
+    • Continuous block production
+  </text>
+  <text x="60" y="421" fill="#ffffff" font-family="monospace" font-size="9">
+    • Guaranteed coretime allocation
+  </text>
+  <text x="60" y="434" fill="#ffffff" font-family="monospace" font-size="9">
+    • Persistent state machine execution
+  </text>
+  
+  <!-- Parathreads Section -->
+  <text x="1000" y="180" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="16" font-weight="bold">
+    PARATHREADS
+  </text>
+  <text x="1000" y="195" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="11">
+    Pay-as-You-Go • Dynamic Allocation
+  </text>
+  
+  <!-- Parathread Pool -->
+  <rect x="850" y="220" width="300" height="120" fill="#1a1a2e" stroke="#ff6b35" stroke-width="2" rx="5" stroke-dasharray="5,5"/>
+  <text x="1000" y="240" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="11" font-weight="bold">
+    PARATHREAD POOL
+  </text>
+  <text x="1000" y="255" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    Dynamic Block Space Bidding
+  </text>
+  
+  <!-- Individual Parathreads -->
+  <rect x="870" y="270" width="60" height="30" fill="#2d1b2e" stroke="#ff6b35" stroke-width="1" rx="2"/>
+  <text x="900" y="285" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">
+    PT-1
+  </text>
+  <text x="900" y="295" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">
+    STF
+  </text>
+  
+  <rect x="940" y="270" width="60" height="30" fill="#2d1b2e" stroke="#ff6b35" stroke-width="1" rx="2"/>
+  <text x="970" y="285" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">
+    PT-2
+  </text>
+  <text x="970" y="295" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">
+    STF
+  </text>
+  
+  <rect x="1010" y="270" width="60" height="30" fill="#2d1b2e" stroke="#ff6b35" stroke-width="1" rx="2"/>
+  <text x="1040" y="285" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">
+    PT-3
+  </text>
+  <text x="1040" y="295" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">
+    STF
+  </text>
+  
+  <rect x="1080" y="270" width="60" height="30" fill="#2d1b2e" stroke="#ff6b35" stroke-width="1" rx="2"/>
+  <text x="1110" y="285" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">
+    PT-N
+  </text>
+  <text x="1110" y="295" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">
+    STF
+  </text>
+  
+  <!-- Shared Collator -->
+  <rect x="920" y="310" width="160" height="20" fill="#16213e" stroke="#ff6b35" stroke-width="1" rx="3"/>
+  <text x="1000" y="325" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="9">
+    Shared Collator Infrastructure
+  </text>
+  
+  <!-- Parathread characteristics -->
+  <rect x="850" y="360" width="300" height="80" fill="#0f1419" stroke="#ff6b35" stroke-width="1" rx="3"/>
+  <text x="1000" y="380" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="10" font-weight="bold">
+    PARATHREAD CHARACTERISTICS
+  </text>
+  <text x="860" y="395" fill="#ffffff" font-family="monospace" font-size="9">
+    • Pay-per-block execution model
+  </text>
+  <text x="860" y="408" fill="#ffffff" font-family="monospace" font-size="9">
+    • Dynamic coretime bidding
+  </text>
+  <text x="860" y="421" fill="#ffffff" font-family="monospace" font-size="9">
+    • Intermittent connectivity
+  </text>
+  <text x="860" y="434" fill="#ffffff" font-family="monospace" font-size="9">
+    • Can upgrade to parachain
+  </text>
+  
+  <!-- Data Flow Section -->
+  <text x="600" y="480" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">
+    STATE TRANSITION PROOF FLOW
+  </text>
+  
+  <!-- Parachain Flow -->
+  <rect x="50" y="500" width="300" height="120" fill="#0f1419" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="200" y="520" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="11" font-weight="bold">
+    PARACHAIN FLOW
+  </text>
+  
+  <!-- Flow steps for parachains -->
+  <circle cx="80" cy="540" r="15" fill="#00d4ff" stroke="#ffffff" stroke-width="1"/>
+  <text x="80" y="545" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">1</text>
+  <text x="110" y="545" fill="#ffffff" font-family="monospace" font-size="9">Collect TX</text>
+  
+  <circle cx="200" cy="540" r="15" fill="#00d4ff" stroke="#ffffff" stroke-width="1"/>
+  <text x="200" y="545" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">2</text>
+  <text x="230" y="545" fill="#ffffff" font-family="monospace" font-size="9">Execute STF</text>
+  
+  <circle cx="80" cy="570" r="15" fill="#00d4ff" stroke="#ffffff" stroke-width="1"/>
+  <text x="80" y="575" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">3</text>
+  <text x="110" y="575" fill="#ffffff" font-family="monospace" font-size="9">Generate PoV</text>
+  
+  <circle cx="200" cy="570" r="15" fill="#00d4ff" stroke="#ffffff" stroke-width="1"/>
+  <text x="200" y="575" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">4</text>
+  <text x="230" y="575" fill="#ffffff" font-family="monospace" font-size="9">Submit to Relay Chain</text>
+  
+  <circle cx="140" cy="600" r="15" fill="#00d4ff" stroke="#ffffff" stroke-width="1"/>
+  <text x="140" y="605" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">5</text>
+  <text x="170" y="605" fill="#ffffff" font-family="monospace" font-size="9">Validator Verify</text>
+  
+  <!-- Parathread Flow -->
+  <rect x="850" y="500" width="300" height="120" fill="#0f1419" stroke="#ff6b35" stroke-width="1" rx="3"/>
+  <text x="1000" y="520" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="11" font-weight="bold">
+    PARATHREAD FLOW
+  </text>
+  
+  <!-- Flow steps for parathreads -->
+  <circle cx="880" cy="540" r="15" fill="#ff6b35" stroke="#ffffff" stroke-width="1"/>
+  <text x="880" y="545" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">1</text>
+  <text x="910" y="545" fill="#ffffff" font-family="monospace" font-size="9">Bid for Block</text>
+  
+  <circle cx="1000" cy="540" r="15" fill="#ff6b35" stroke="#ffffff" stroke-width="1"/>
+  <text x="1000" y="545" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">2</text>
+  <text x="1030" y="545" fill="#ffffff" font-family="monospace" font-size="9">Win Allocation</text>
+  
+  <circle cx="880" cy="570" r="15" fill="#ff6b35" stroke="#ffffff" stroke-width="1"/>
+  <text x="880" y="575" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">3</text>
+  <text x="910" y="575" fill="#ffffff" font-family="monospace" font-size="9">Execute STF</text>
+  
+  <circle cx="1000" cy="570" r="15" fill="#ff6b35" stroke="#ffffff" stroke-width="1"/>
+  <text x="1000" y="575" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">4</text>
+  <text x="1030" y="575" fill="#ffffff" font-family="monospace" font-size="9">Generate PoV</text>
+  
+  <circle cx="940" cy="600" r="15" fill="#ff6b35" stroke="#ffffff" stroke-width="1"/>
+  <text x="940" y="605" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10" font-weight="bold">5</text>
+  <text x="970" y="605" fill="#ffffff" font-family="monospace" font-size="9">Submit to Relay Chain</text>
+  
+  <!-- Central comparison -->
+  <rect x="420" y="500" width="360" height="120" fill="#16213e" stroke="#ffffff" stroke-width="1" rx="3"/>
+  <text x="600" y="520" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold">
+    SHARED SECURITY MODEL
+  </text>
+  
+  <text x="430" y="540" fill="#ffffff" font-family="monospace" font-size="9">
+    Both parachains &amp; parathreads:
+  </text>
+  <text x="430" y="555" fill="#ffffff" font-family="monospace" font-size="9">
+    • Deterministic state machines with unique Runtime/STF
+  </text>
+  <text x="430" y="570" fill="#ffffff" font-family="monospace" font-size="9">
+    • Collators generate cryptographic PoV attestations
+  </text>
+  <text x="430" y="585" fill="#ffffff" font-family="monospace" font-size="9">
+    • Relay Chain validators verify state transitions
+  </text>
+  <text x="430" y="600" fill="#ffffff" font-family="monospace" font-size="9">
+    • Full XCM support for cross-chain messaging
+  </text>
+  
+  <!-- Arrows showing connections -->
+  <!-- Parachain to Relay Chain -->
+  <path d="M 200 360 Q 300 400 400 100" stroke="#00d4ff" stroke-width="2" fill="none" marker-end="url(#arrowhead-blue)"/>
+  
+  <!-- Parathread to Relay Chain -->
+  <path d="M 1000 360 Q 900 400 800 100" stroke="#ff6b35" stroke-width="2" fill="none" marker-end="url(#arrowhead-orange)"/>
+  
+  <!-- Key differences -->
+  <rect x="50" y="650" width="1100" height="130" fill="#0f1419" stroke="#ffffff" stroke-width="1" rx="3"/>
+  <text x="600" y="670" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">
+    KEY ARCHITECTURAL DIFFERENCES
+  </text>
+  
+  <!-- Parachain column -->
+  <text x="200" y="690" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="11" font-weight="bold">
+    PARACHAINS
+  </text>
+  <text x="60" y="710" fill="#00d4ff" font-family="monospace" font-size="9">
+    Resource Model:
+  </text>
+  <text x="160" y="710" fill="#ffffff" font-family="monospace" font-size="9">
+    Fixed slot lease (auction-based)
+  </text>
+  <text x="60" y="725" fill="#00d4ff" font-family="monospace" font-size="9">
+    Execution:
+  </text>
+  <text x="160" y="725" fill="#ffffff" font-family="monospace" font-size="9">
+    Continuous, guaranteed coretime
+  </text>
+  <text x="60" y="740" fill="#00d4ff" font-family="monospace" font-size="9">
+    Economics:
+  </text>
+  <text x="160" y="740" fill="#ffffff" font-family="monospace" font-size="9">
+    High upfront cost, predictable
+  </text>
+  <text x="60" y="755" fill="#00d4ff" font-family="monospace" font-size="9">
+    Use Case:
+  </text>
+  <text x="160" y="755" fill="#ffffff" font-family="monospace" font-size="9">
+    High-throughput, persistent dApps
+  </text>
+  
+  <!-- Parathread column -->
+  <text x="1000" y="690" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="11" font-weight="bold">
+    PARATHREADS
+  </text>
+  <text x="860" y="710" fill="#ff6b35" font-family="monospace" font-size="9">
+    Resource Model:
+  </text>
+  <text x="960" y="710" fill="#ffffff" font-family="monospace" font-size="9">
+    Dynamic bidding per block
+  </text>
+  <text x="860" y="725" fill="#ff6b35" font-family="monospace" font-size="9">
+    Execution:
+  </text>
+  <text x="960" y="725" fill="#ffffff" font-family="monospace" font-size="9">
+    Intermittent, on-demand
+  </text>
+  <text x="860" y="740" fill="#ff6b35" font-family="monospace" font-size="9">
+    Economics:
+  </text>
+  <text x="960" y="740" fill="#ffffff" font-family="monospace" font-size="9">
+    Pay-per-use, cost-efficient
+  </text>
+  <text x="860" y="755" fill="#ff6b35" font-family="monospace" font-size="9">
+    Use Case:
+  </text>
+  <text x="960" y="755" fill="#ffffff" font-family="monospace" font-size="9">
+    Low-activity, experimental chains
+  </text>
+  
+  <!-- Central comparison -->
+  <text x="600" y="690" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold">
+    SHARED ATTRIBUTES
+  </text>
+  <text x="600" y="710" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    • Same security guarantees from Relay Chain
+  </text>
+  <text x="600" y="725" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    • Full XCM cross-chain messaging support
+  </text>
+  <text x="600" y="740" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    • Can transition between models
+  </text>
+  <text x="600" y="755" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9">
+    • Custom Runtime/STF logic
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00d4ff"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b35"/>
+    </marker>
+  </defs>
+</svg>

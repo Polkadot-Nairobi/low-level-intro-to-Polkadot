@@ -15,7 +15,7 @@
 
   - **Fishermen**: These are specialized full nodes that continuously monitor the Relay Chain and other parts of the protocol to identify and report any malicious or incorrect behavior to the validator nodes. Unlike collators, fishermen do not package state transitions or produce parachain blocks; their role is purely supervisory. They stake a small amount of DOT and are significantly rewarded for successfully identifying and reporting malicious activity, acting as a crucial deterrent against misbehavior.
 
-![NPOS Roles](../../images/npos-roles.svg)
+![NPOS Roles](../../../images/npos-roles.svg)
 
 ## b. Economic Security: Staking, Slashing, and Incentives
 

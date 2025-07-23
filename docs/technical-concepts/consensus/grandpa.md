@@ -14,3 +14,5 @@
 - GRANDPA provides the absolute guarantee of state finality for the Relay Chain.
 - By voting on chains and finalizing multiple blocks simultaneously, it offers high-throughput finality, which is crucial for coordinating the state transitions of numerous parachains.
 - The "provable finality" and "accountable safety" mechanisms are critical for the security and trustlessness of Polkadot's global state machine
+
+![GRANDPA Finality](../../../images/grandpa-finality.svg)

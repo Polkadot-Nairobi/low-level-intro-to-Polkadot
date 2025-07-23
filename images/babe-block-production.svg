@@ -1,0 +1,264 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="epochGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:0.4" />
+    </linearGradient>
+    <linearGradient id="slotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="validatorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E11D48;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#BE185D;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="blockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="lotteryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:0.9" />
+    </linearGradient>
+    <radialGradient id="randomnessGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:0.9" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#0F172A"/>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" fill="#F8FAFC" font-size="26" font-weight="bold" font-family="Arial, sans-serif">
+    BABE: Blind Assignment for Blockchain Extension
+  </text>
+  <text x="600" y="55" text-anchor="middle" fill="#94A3B8" font-size="14" font-family="Arial, sans-serif">
+    Block Production Mechanism for Polkadot Relay Chain
+  </text>
+
+  <!-- Randomness Source -->
+  <g id="randomness">
+    <circle cx="150" cy="120" r="40" fill="url(#randomnessGrad)" stroke="#06B6D4" stroke-width="2"/>
+    <text x="150" y="115" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="bold" font-family="Arial, sans-serif">VRF</text>
+    <text x="150" y="130" text-anchor="middle" fill="#F8FAFC" font-size="10" font-family="Arial, sans-serif">Randomness</text>
+    <text x="150" y="170" text-anchor="middle" fill="#E2E8F0" font-size="11" font-family="Arial, sans-serif">Verifiable Random Function</text>
+    <text x="150" y="185" text-anchor="middle" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">Epoch Randomness Seed</text>
+  </g>
+
+  <!-- Epoch Timeline -->
+  <g id="epochs">
+    <text x="50" y="250" fill="#E2E8F0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Epoch Structure (Sequential Phases)</text>
+    
+    <!-- Epoch N-1 -->
+    <rect x="50" y="270" width="200" height="80" rx="8" fill="url(#epochGrad)" stroke="#6366F1" stroke-width="2" opacity="0.5"/>
+    <text x="150" y="290" text-anchor="middle" fill="#E2E8F0" font-size="12" font-weight="bold" font-family="Arial, sans-serif">EPOCH N-1</text>
+    <text x="150" y="308" text-anchor="middle" fill="#CBD5E1" font-size="10" font-family="Arial, sans-serif">Previous Epoch</text>
+    <text x="150" y="325" text-anchor="middle" fill="#CBD5E1" font-size="10" font-family="Arial, sans-serif">Completed Slots</text>
+    <text x="150" y="340" text-anchor="middle" fill="#CBD5E1" font-size="9" font-family="Arial, sans-serif">~600 slots (~1hr)</text>
+
+    <!-- Epoch N (Current) -->
+    <rect x="270" y="270" width="200" height="80" rx="8" fill="url(#epochGrad)" stroke="#6366F1" stroke-width="3"/>
+    <text x="370" y="290" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="bold" font-family="Arial, sans-serif">EPOCH N (CURRENT)</text>
+    <text x="370" y="308" text-anchor="middle" fill="#F1F5F9" font-size="10" font-family="Arial, sans-serif">Active Block Production</text>
+    <text x="370" y="325" text-anchor="middle" fill="#F1F5F9" font-size="10" font-family="Arial, sans-serif">Slot Lottery Active</text>
+    <text x="370" y="340" text-anchor="middle" fill="#CBD5E1" font-size="9" font-family="Arial, sans-serif">~600 slots (~1hr)</text>
+
+    <!-- Epoch N+1 -->
+    <rect x="490" y="270" width="200" height="80" rx="8" fill="url(#epochGrad)" stroke="#6366F1" stroke-width="2" opacity="0.3"/>
+    <text x="590" y="290" text-anchor="middle" fill="#94A3B8" font-size="12" font-weight="bold" font-family="Arial, sans-serif">EPOCH N+1</text>
+    <text x="590" y="308" text-anchor="middle" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">Future Epoch</text>
+    <text x="590" y="325" text-anchor="middle" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">Pre-computed Assignments</text>
+    <text x="590" y="340" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="Arial, sans-serif">~600 slots (~1hr)</text>
+  </g>
+
+  <!-- Slot Detail View -->
+  <g id="slots">
+    <text x="50" y="400" fill="#E2E8F0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Slot Structure (6 seconds per slot)</text>
+    
+    <!-- Individual Slots -->
+    <g id="slot-details">
+      <!-- Slot i -->
+      <rect x="50" y="420" width="80" height="60" rx="6" fill="url(#slotGrad)" stroke="#8B5CF6" stroke-width="2"/>
+      <text x="90" y="440" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="Arial, sans-serif">SLOT i</text>
+      <text x="90" y="455" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">6 seconds</text>
+      <text x="90" y="470" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">Lottery</text>
+
+      <!-- Slot i+1 -->
+      <rect x="150" y="420" width="80" height="60" rx="6" fill="url(#slotGrad)" stroke="#8B5CF6" stroke-width="2"/>
+      <text x="190" y="440" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="Arial, sans-serif">SLOT i+1</text>
+      <text x="190" y="455" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">6 seconds</text>
+      <text x="190" y="470" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">Lottery</text>
+
+      <!-- Slot i+2 -->
+      <rect x="250" y="420" width="80" height="60" rx="6" fill="url(#slotGrad)" stroke="#8B5CF6" stroke-width="2"/>
+      <text x="290" y="440" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="Arial, sans-serif">SLOT i+2</text>
+      <text x="290" y="455" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">6 seconds</text>
+      <text x="290" y="470" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">Lottery</text>
+
+      <!-- Continue arrow -->
+      <path d="M 340 450 L 360 450" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+      <text x="380" y="455" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">...</text>
+    </g>
+  </g>
+
+  <!-- Validator Pool -->
+  <g id="validator-pool">
+    <text x="750" y="120" fill="#E2E8F0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Validator Pool</text>
+    
+    <!-- Validator A -->
+    <rect x="750" y="140" width="100" height="50" rx="6" fill="url(#validatorGrad)" stroke="#E11D48" stroke-width="2"/>
+    <text x="800" y="160" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="Arial, sans-serif">VALIDATOR A</text>
+    <text x="800" y="175" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">1000 DOT</text>
+    <circle cx="760" cy="150" r="3" fill="#FDE047"/>
+
+    <!-- Validator B -->
+    <rect x="870" y="140" width="100" height="50" rx="6" fill="url(#validatorGrad)" stroke="#E11D48" stroke-width="2"/>
+    <text x="920" y="160" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="Arial, sans-serif">VALIDATOR B</text>
+    <text x="920" y="175" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">1500 DOT</text>
+    <circle cx="880" cy="150" r="3" fill="#FDE047"/>
+
+    <!-- Validator C -->
+    <rect x="990" y="140" width="100" height="50" rx="6" fill="url(#validatorGrad)" stroke="#E11D48" stroke-width="2"/>
+    <text x="1040" y="160" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="Arial, sans-serif">VALIDATOR C</text>
+    <text x="1040" y="175" text-anchor="middle" fill="#F1F5F9" font-size="9" font-family="Arial, sans-serif">800 DOT</text>
+    <circle cx="1000" cy="150" r="3" fill="#FDE047"/>
+
+    <!-- More validators indicator -->
+    <text x="1040" y="210" text-anchor="middle" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">... + more validators</text>
+  </g>
+
+  <!-- Lottery Mechanism -->
+  <g id="lottery">
+    <text x="750" y="280" fill="#E2E8F0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Slot Lottery Mechanism</text>
+    
+    <!-- Lottery Box -->
+    <rect x="750" y="300" width="400" height="120" rx="8" fill="url(#lotteryGrad)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="950" y="325" text-anchor="middle" fill="#F8FAFC" font-size="14" font-weight="bold" font-family="Arial, sans-serif">VRF-Based Slot Assignment</text>
+    
+    <!-- Lottery Process -->
+    <text x="770" y="350" fill="#F1F5F9" font-size="11" font-family="Arial, sans-serif">1. Each validator computes VRF(slot_number, epoch_randomness, validator_key)</text>
+    <text x="770" y="370" fill="#F1F5F9" font-size="11" font-family="Arial, sans-serif">2. If VRF_output &lt; threshold × (validator_stake / total_stake)</text>
+    <text x="770" y="390" fill="#F1F5F9" font-size="11" font-family="Arial, sans-serif">3. Validator wins slot and can produce block</text>
+    <text x="770" y="410" fill="#F1F5F9" font-size="11" font-family="Arial, sans-serif">4. Multiple winners → fork; No winners → secondary selection</text>
+  </g>
+
+  <!-- Block Production Scenarios -->
+  <g id="scenarios">
+    <text x="50" y="540" fill="#E2E8F0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Block Production Scenarios</text>
+    
+    <!-- Normal Case -->
+    <g id="normal-case">
+      <rect x="50" y="560" width="300" height="100" rx="8" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <text x="200" y="580" text-anchor="middle" fill="#10B981" font-size="12" font-weight="bold" font-family="Arial, sans-serif">NORMAL CASE</text>
+      <text x="70" y="605" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Single validator wins slot lottery</text>
+      <text x="70" y="620" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Produces block with transactions</text>
+      <text x="70" y="635" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Block propagated to network</text>
+      <text x="70" y="650" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Chain extends linearly</text>
+      
+      <!-- Block representation -->
+      <rect x="280" y="590" width="50" height="30" rx="4" fill="url(#blockGrad)" stroke="#10B981" stroke-width="1"/>
+      <text x="305" y="610" text-anchor="middle" fill="#F8FAFC" font-size="9" font-family="Arial, sans-serif">BLOCK</text>
+    </g>
+
+    <!-- Fork Case -->
+    <g id="fork-case">
+      <rect x="370" y="560" width="300" height="100" rx="8" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <text x="520" y="580" text-anchor="middle" fill="#F59E0B" font-size="12" font-weight="bold" font-family="Arial, sans-serif">FORK CASE</text>
+      <text x="390" y="605" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Multiple validators win same slot</text>
+      <text x="390" y="620" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Competing blocks produced</text>
+      <text x="390" y="635" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Temporary fork occurs</text>
+      <text x="390" y="650" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• GRANDPA finalizes canonical chain</text>
+      
+      <!-- Fork representation -->
+      <rect x="580" y="585" width="40" height="25" rx="3" fill="url(#blockGrad)" stroke="#10B981" stroke-width="1"/>
+      <text x="600" y="600" text-anchor="middle" fill="#F8FAFC" font-size="8" font-family="Arial, sans-serif">BLK A</text>
+      <rect x="580" y="615" width="40" height="25" rx="3" fill="url(#blockGrad)" stroke="#10B981" stroke-width="1"/>
+      <text x="600" y="630" text-anchor="middle" fill="#F8FAFC" font-size="8" font-family="Arial, sans-serif">BLK B</text>
+      <path d="M 570 610 L 580 597" stroke="#F59E0B" stroke-width="1" fill="none"/>
+      <path d="M 570 610 L 580 627" stroke="#F59E0B" stroke-width="1" fill="none"/>
+    </g>
+
+    <!-- Empty Slot Case -->
+    <g id="empty-case">
+      <rect x="690" y="560" width="300" height="100" rx="8" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <text x="840" y="580" text-anchor="middle" fill="#EF4444" font-size="12" font-weight="bold" font-family="Arial, sans-serif">EMPTY SLOT</text>
+      <text x="710" y="605" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• No validator wins slot lottery</text>
+      <text x="710" y="620" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Secondary selection algorithm</text>
+      <text x="710" y="635" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Backup validator produces block</text>
+      <text x="710" y="650" fill="#E2E8F0" font-size="10" font-family="Arial, sans-serif">• Network liveness maintained</text>
+      
+      <!-- Empty slot representation -->
+      <rect x="900" y="590" width="50" height="30" rx="4" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="3,3"/>
+      <text x="925" y="610" text-anchor="middle" fill="#EF4444" font-size="9" font-family="Arial, sans-serif">EMPTY</text>
+    </g>
+  </g>
+
+  <!-- Block Chain Representation -->
+  <g id="blockchain">
+    <text x="50" y="720" fill="#E2E8F0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Resulting Blockchain</text>
+    
+    <!-- Chain blocks -->
+    <rect x="50" y="740" width="60" height="40" rx="4" fill="url(#blockGrad)" stroke="#10B981" stroke-width="2"/>
+    <text x="80" y="760" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="Arial, sans-serif">Block n</text>
+    
+    <path d="M 110 760 L 130 760" stroke="#10B981" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="140" y="740" width="60" height="40" rx="4" fill="url(#blockGrad)" stroke="#10B981" stroke-width="2"/>
+    <text x="170" y="760" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="Arial, sans-serif">Block n+1</text>
+    
+    <path d="M 200 760 L 220 760" stroke="#10B981" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="230" y="740" width="60" height="40" rx="4" fill="url(#blockGrad)" stroke="#10B981" stroke-width="2"/>
+    <text x="260" y="760" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="Arial, sans-serif">Block n+2</text>
+    
+    <path d="M 290 760 L 310 760" stroke="#10B981" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <text x="330" y="765" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">... continuous chain</text>
+    
+    <!-- Time indicators -->
+    <text x="80" y="800" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="Arial, sans-serif">t + 6s</text>
+    <text x="170" y="800" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="Arial, sans-serif">t + 12s</text>
+    <text x="260" y="800" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="Arial, sans-serif">t + 18s</text>
+  </g>
+
+  <!-- Arrows connecting components -->
+  <!-- Randomness to Lottery -->
+  <path d="M 190 120 L 750 350" stroke="#06B6D4" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  
+  <!-- Validators to Lottery -->
+  <path d="M 800 190 L 850 300" stroke="#E11D48" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 920 190 L 900 300" stroke="#E11D48" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 1040 190 L 950 300" stroke="#E11D48" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Slots to Scenarios -->
+  <path d="M 200 480 L 200 560" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E2E8F0"/>
+    </marker>
+  </defs>
+
+  <!-- Technical Summary -->
+  <g id="summary">
+    <rect x="1010" y="560" width="180" height="200" rx="8" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    <text x="1100" y="580" text-anchor="middle" fill="#F8FAFC" font-size="14" font-weight="bold" font-family="Arial, sans-serif">BABE Properties</text>
+    
+    <text x="1025" y="605" fill="#10B981" font-size="11" font-weight="bold" font-family="Arial, sans-serif">✓ Probabilistic Finality</text>
+    <text x="1025" y="625" fill="#10B981" font-size="11" font-weight="bold" font-family="Arial, sans-serif">✓ Network Liveness</text>
+    <text x="1025" y="645" fill="#10B981" font-size="11" font-weight="bold" font-family="Arial, sans-serif">✓ Decentralized</text>
+    <text x="1025" y="665" fill="#10B981" font-size="11" font-weight="bold" font-family="Arial, sans-serif">✓ Fork Resilient</text>
+    <text x="1025" y="685" fill="#10B981" font-size="11" font-weight="bold" font-family="Arial, sans-serif">✓ VRF Randomness</text>
+    
+    <text x="1025" y="715" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">Similar to Ouroboros Praos</text>
+    <text x="1025" y="730" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">6 second slot duration</text>
+    <text x="1025" y="745" fill="#94A3B8" font-size="10" font-family="Arial, sans-serif">~600 slots per epoch</text>
+  </g>
+
+  <!-- Performance Metrics -->
+  <text x="50" y="850" fill="#94A3B8" font-size="11" font-family="Arial, sans-serif">Performance: ~6 second block times • ~600 TPS capacity • Probabilistic finality with GRANDPA finalization</text>
+  <text x="50" y="870" fill="#94A3B8" font-size="11" font-family="Arial, sans-serif">Security: VRF-based randomness • Stake-weighted probability • Fork choice via longest chain + GRANDPA</text>
+</svg>

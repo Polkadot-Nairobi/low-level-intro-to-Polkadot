@@ -1,0 +1,204 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 16px monospace; fill: #E6007A; }
+      .subtitle { font: bold 12px monospace; fill: #BB86FC; }
+      .label { font: 10px monospace; fill: #E0E0E0; }
+      .tech-label { font: 9px monospace; fill: #B0B0B0; }
+      .validator { fill: #4CAF50; stroke: #66BB6A; stroke-width: 2; }
+      .byzantine { fill: #F44336; stroke: #EF5350; stroke-width: 2; }
+      .block { fill: #2196F3; stroke: #42A5F5; stroke-width: 1.5; }
+      .finalized { fill: #4CAF50; stroke: #66BB6A; stroke-width: 2; }
+      .vote-line { stroke: #FF9800; stroke-width: 2; stroke-dasharray: 5,3; }
+      .chain-line { stroke: #E0E0E0; stroke-width: 3; }
+      .parallel-process { fill: #2A2A2A; stroke: #555; stroke-width: 1; stroke-dasharray: 3,3; }
+    </style>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF9800" />
+    </marker>
+    
+    <pattern id="finalizedPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#4CAF50"/>
+      <rect width="2" height="2" fill="#66BB6A"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1A1A"/>
+  
+  <!-- Title -->
+  <text x="600" y="25" text-anchor="middle" class="title">GRANDPA: Provable Finality Mechanism</text>
+  <text x="600" y="45" text-anchor="middle" class="subtitle">GHOST-based Recursive Ancestor Deriving Prefix Agreement</text>
+
+  <!-- Block Production Process (Top) -->
+  <rect x="50" y="80" width="1100" height="80" class="parallel-process" rx="5"/>
+  <text x="60" y="100" class="label">BLOCK PRODUCTION (Parallel Process)</text>
+  
+  <!-- Block Chain -->
+  <g id="blockchain">
+    <rect x="100" y="110" width="30" height="25" class="block" rx="3"/>
+    <text x="115" y="127" text-anchor="middle" class="tech-label">B1</text>
+    
+    <rect x="150" y="110" width="30" height="25" class="block" rx="3"/>
+    <text x="165" y="127" text-anchor="middle" class="tech-label">B2</text>
+    
+    <rect x="200" y="110" width="30" height="25" class="finalized" rx="3"/>
+    <text x="215" y="127" text-anchor="middle" class="tech-label">B3</text>
+    
+    <rect x="250" y="110" width="30" height="25" class="finalized" rx="3"/>
+    <text x="265" y="127" text-anchor="middle" class="tech-label">B4</text>
+    
+    <rect x="300" y="110" width="30" height="25" class="finalized" rx="3"/>
+    <text x="315" y="127" text-anchor="middle" class="tech-label">B5</text>
+    
+    <!-- Continue chain -->
+    <rect x="400" y="110" width="30" height="25" class="block" rx="3"/>
+    <text x="415" y="127" text-anchor="middle" class="tech-label">B8</text>
+    
+    <rect x="450" y="110" width="30" height="25" class="block" rx="3"/>
+    <text x="465" y="127" text-anchor="middle" class="tech-label">B9</text>
+    
+    <!-- Chain connectors -->
+    <line x1="130" y1="122" x2="150" y2="122" class="chain-line"/>
+    <line x1="180" y1="122" x2="200" y2="122" class="chain-line"/>
+    <line x1="230" y1="122" x2="250" y2="122" class="chain-line"/>
+    <line x1="280" y1="122" x2="300" y2="122" class="chain-line"/>
+    <line x1="330" y1="122" x2="400" y2="122" class="chain-line"/>
+    <line x1="430" y1="122" x2="450" y2="122" class="chain-line"/>
+    
+    <!-- Finality boundary -->
+    <line x1="350" y1="105" x2="350" y2="155" stroke="#4CAF50" stroke-width="3"/>
+    <text x="355" y="152" class="label" fill="#4CAF50">FINALIZED</text>
+  </g>
+
+  <!-- GRANDPA Validators Network -->
+  <text x="60" y="200" class="subtitle">GRANDPA Validator Network (2/3 Honest, ≤1/5 Byzantine)</text>
+  
+  <!-- Validator nodes in circular arrangement -->
+  <g id="validators">
+    <!-- Honest validators (green) -->
+    <circle cx="200" cy="250" r="15" class="validator"/>
+    <text x="200" y="255" text-anchor="middle" class="tech-label" fill="white">V1</text>
+    
+    <circle cx="300" cy="230" r="15" class="validator"/>
+    <text x="300" y="235" text-anchor="middle" class="tech-label" fill="white">V2</text>
+    
+    <circle cx="400" cy="250" r="15" class="validator"/>
+    <text x="400" y="255" text-anchor="middle" class="tech-label" fill="white">V3</text>
+    
+    <circle cx="500" cy="230" r="15" class="validator"/>
+    <text x="500" y="235" text-anchor="middle" class="tech-label" fill="white">V4</text>
+    
+    <circle cx="600" cy="250" r="15" class="validator"/>
+    <text x="600" y="255" text-anchor="middle" class="tech-label" fill="white">V5</text>
+    
+    <circle cx="700" cy="230" r="15" class="validator"/>
+    <text x="700" y="235" text-anchor="middle" class="tech-label" fill="white">V6</text>
+    
+    <circle cx="800" cy="250" r="15" class="validator"/>
+    <text x="800" y="255" text-anchor="middle" class="tech-label" fill="white">V7</text>
+    
+    <!-- Byzantine validators (red) -->
+    <circle cx="350" cy="300" r="15" class="byzantine"/>
+    <text x="350" y="305" text-anchor="middle" class="tech-label" fill="white">B1</text>
+    
+    <circle cx="650" cy="300" r="15" class="byzantine"/>
+    <text x="650" y="305" text-anchor="middle" class="tech-label" fill="white">B2</text>
+  </g>
+
+  <!-- Chain-based Voting Visualization -->
+  <text x="60" y="360" class="subtitle">Chain-Based Voting (Not Block-Based)</text>
+  
+  <!-- Vote arrows pointing to chain segments -->
+  <g id="chain-votes">
+    <path d="M 200 270 Q 220 290 215 350" stroke="#FF9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M 300 245 Q 280 280 265 350" stroke="#FF9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M 400 270 Q 380 290 315 350" stroke="#FF9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M 500 245 Q 480 280 315 350" stroke="#FF9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M 600 270 Q 580 290 315 350" stroke="#FF9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Chain segment being voted on -->
+    <rect x="200" y="370" width="130" height="25" fill="url(#finalizedPattern)" stroke="#4CAF50" stroke-width="2" rx="3"/>
+    <text x="265" y="387" text-anchor="middle" class="tech-label" fill="white">CHAIN[B1→B5]</text>
+  </g>
+
+  <!-- Supermajority Threshold -->
+  <rect x="400" y="350" width="200" height="60" fill="#2A2A2A" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="410" y="370" class="label">SUPERMAJORITY: 6/9 ≥ 2/3</text>
+  <text x="410" y="385" class="tech-label">✓ Honest: 5 votes</text>
+  <text x="410" y="395" class="tech-label">✗ Byzantine: 1 vote</text>
+  <text x="410" y="405" class="tech-label">RESULT: FINALIZE</text>
+
+  <!-- Finality Properties -->
+  <g id="finality-properties">
+    <rect x="50" y="450" width="280" height="120" fill="#1A3D1A" stroke="#4CAF50" stroke-width="2" rx="5"/>
+    <text x="60" y="470" class="subtitle" fill="#66BB6A">Provable Finality</text>
+    <text x="60" y="485" class="tech-label">• Irreversible once finalized</text>
+    <text x="60" y="495" class="tech-label">• Cryptographic proof of finality</text>
+    <text x="60" y="505" class="tech-label">• No rollbacks possible</text>
+    
+    <text x="60" y="525" class="subtitle" fill="#66BB6A">Accountable Safety</text>
+    <text x="60" y="540" class="tech-label">• Validators held accountable</text>
+    <text x="60" y="550" class="tech-label">• Slashing for safety violations</text>
+    <text x="60" y="560" class="tech-label">• Identifies misbehaving nodes</text>
+  </g>
+
+  <!-- Network Conditions -->
+  <rect x="350" y="450" width="280" height="120" fill="#3D2A00" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="360" y="470" class="subtitle" fill="#FFB74D">Network Resilience</text>
+  <text x="360" y="485" class="tech-label">• Asynchronous network tolerant</text>
+  <text x="360" y="495" class="tech-label">• ≤1/5 Byzantine fault tolerance</text>
+  <text x="360" y="505" class="tech-label">• Near-instant finality (optimal)</text>
+  
+  <text x="360" y="525" class="subtitle" fill="#FFB74D">High Throughput</text>
+  <text x="360" y="540" class="tech-label">• Millions of blocks/finalization</text>
+  <text x="360" y="550" class="tech-label">• Chain-based vs block-based</text>
+  <text x="360" y="560" class="tech-label">• Parallel to block production</text>
+
+  <!-- Parachain Coordination -->
+  <rect x="650" y="450" width="280" height="120" fill="#2A1A3D" stroke="#BB86FC" stroke-width="2" rx="5"/>
+  <text x="660" y="470" class="subtitle" fill="#BB86FC">Parachain Coordination</text>
+  <text x="660" y="485" class="tech-label">• Global state machine security</text>
+  <text x="660" y="495" class="tech-label">• Relay chain finality guarantee</text>
+  <text x="660" y="505" class="tech-label">• State transition coordination</text>
+  
+  <text x="660" y="525" class="subtitle" fill="#BB86FC">Trustless Operation</text>
+  <text x="660" y="540" class="tech-label">• Cryptographic guarantees</text>
+  <text x="660" y="550" class="tech-label">• No trusted third parties</text>
+  <text x="660" y="560" class="tech-label">• Mathematically provable</text>
+
+  <!-- Process Flow -->
+  <g id="process-flow">
+    <text x="60" y="620" class="subtitle">GRANDPA Finalization Process</text>
+    
+    <!-- Step boxes -->
+    <rect x="50" y="640" width="140" height="40" fill="#1A2A3D" stroke="#42A5F5" stroke-width="1" rx="3"/>
+    <text x="55" y="655" class="tech-label">1. Block Production</text>
+    <text x="55" y="665" class="tech-label">   (Parallel Process)</text>
+    
+    <rect x="210" y="640" width="140" height="40" fill="#3D2A00" stroke="#FFB74D" stroke-width="1" rx="3"/>
+    <text x="215" y="655" class="tech-label">2. Validators Vote</text>
+    <text x="215" y="665" class="tech-label">   on Chain Segments</text>
+    
+    <rect x="370" y="640" width="140" height="40" fill="#1A3D1A" stroke="#66BB6A" stroke-width="1" rx="3"/>
+    <text x="375" y="655" class="tech-label">3. Supermajority</text>
+    <text x="375" y="665" class="tech-label">   Consensus (≥2/3)</text>
+    
+    <rect x="530" y="640" width="140" height="40" fill="#2A1A3D" stroke="#BB86FC" stroke-width="1" rx="3"/>
+    <text x="535" y="655" class="tech-label">4. Chain Finalized</text>
+    <text x="535" y="665" class="tech-label">   (All Blocks)</text>
+    
+    <!-- Flow arrows -->
+    <path d="M 190 660 L 210 660" stroke="#E0E0E0" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M 350 660 L 370 660" stroke="#E0E0E0" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M 510 660 L 530 660" stroke="#E0E0E0" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Technical specifications -->
+  <rect x="50" y="720" width="1100" height="60" fill="#2A2A2A" stroke="#555" stroke-width="1" rx="3"/>
+  <text x="60" y="740" class="tech-label">TECHNICAL SPECS: Byzantine Fault Tolerance ≤20% | Asynchronous Network | Chain-based Voting | Provable Finality | Accountable Safety</text>
+  <text x="60" y="755" class="tech-label">SECURITY MODEL: 2/3+ Honest Validators Required | Slashing for Safety Violations | Cryptographic Finality Proofs | Irreversible State Transitions</text>
+  <text x="60" y="770" class="tech-label">PERFORMANCE: Near-instant Finality (Optimal Conditions) | Millions of Blocks/Finalization | Parallel Block Production | High-Throughput Coordination</text>
+
+</svg>

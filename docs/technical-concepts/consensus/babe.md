@@ -9,3 +9,5 @@
 - In such cases, a secondary selection algorithm ensures that a block is still produced, thereby guaranteeing continuous block production and network liveness.
 - BABE's role is to continuously propose new states (blocks) for the Relay Chain's state machine.
 - Its randomness-based slot assignment and robust handling of multiple or empty slots ensure a decentralized and resilient probabilistic finality for block production, optimizing for speed and liveness
+
+![BABE Block production](../../../images/babe-block-production.svg)

@@ -1,0 +1,235 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 18px monospace; fill: #E6007A; }
+      .subtitle { font: bold 14px monospace; fill: #BB86FC; }
+      .label { font: 11px monospace; fill: #E0E0E0; }
+      .tech-label { font: 9px monospace; fill: #B0B0B0; }
+      .principle-label { font: 10px monospace; fill: #FFD700; }
+      .parachain { fill: #2196F3; stroke: #42A5F5; stroke-width: 2; }
+      .relay-chain { fill: #E6007A; stroke: #F48FB1; stroke-width: 2; }
+      .smart-contract { fill: #9C27B0; stroke: #BA68C8; stroke-width: 2; }
+      .bridge { fill: #FF9800; stroke: #FFB74D; stroke-width: 2; }
+      .xcm-message { fill: #4CAF50; stroke: #66BB6A; stroke-width: 2; }
+      .message-flow { stroke: #4CAF50; stroke-width: 3; stroke-dasharray: 8,4; }
+      .principle-box { fill: #2A2A2A; stroke: #555; stroke-width: 1; }
+      .format-box { fill: #1A3D1A; stroke: #4CAF50; stroke-width: 2; }
+    </style>
+    
+    <marker id="xcm-arrow" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#4CAF50" />
+    </marker>
+    
+    <marker id="feedback-arrow" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#FF9800" />
+    </marker>
+    
+    <pattern id="messagePattern" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#4CAF50"/>
+      <rect width="3" height="3" fill="#66BB6A"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1400" height="900" fill="#1A1A1A"/>
+  
+  <!-- Title -->
+  <text x="700" y="25" text-anchor="middle" class="title">XCM: Cross-Consensus Message Format</text>
+  <text x="700" y="45" text-anchor="middle" class="subtitle">Universal Language for Cross-Chain State Machine Orchestration</text>
+
+  <!-- Four A's Principles Header -->
+  <rect x="50" y="70" width="1300" height="100" fill="#2A2A2A" stroke="#FFD700" stroke-width="2" rx="8"/>
+  <text x="70" y="95" class="subtitle" fill="#FFD700">The Four A's: Design Principles</text>
+  
+  <!-- Principle boxes -->
+  <rect x="70" y="110" width="300" height="45" class="principle-box" rx="4"/>
+  <text x="80" y="125" class="principle-label">ASYNCHRONOUS</text>
+  <text x="80" y="135" class="tech-label">Non-blocking, parallel processing</text>
+  <text x="80" y="145" class="tech-label">No wait for completion/acknowledgment</text>
+  
+  <rect x="390" y="110" width="300" height="45" class="principle-box" rx="4"/>
+  <text x="400" y="125" class="principle-label">ABSOLUTE</text>
+  <text x="400" y="135" class="tech-label">Guaranteed delivery &amp; interpretation</text>
+  <text x="400" y="145" class="tech-label">Correct order, timely fashion</text>
+  
+  <rect x="710" y="110" width="300" height="45" class="principle-box" rx="4"/>
+  <text x="720" y="125" class="principle-label">ASYMMETRIC</text>
+  <text x="720" y="135" class="tech-label">"Fire and forget" paradigm</text>
+  <text x="720" y="145" class="tech-label">Explicit feedback via separate message</text>
+  
+  <rect x="1030" y="110" width="300" height="45" class="principle-box" rx="4"/>
+  <text x="1040" y="125" class="principle-label">AGNOSTIC</text>
+  <text x="1040" y="135" class="tech-label">No assumptions about consensus systems</text>
+  <text x="1040" y="145" class="tech-label">Universal compatibility across blockchains</text>
+
+  <!-- Consensus Systems Layout -->
+  <text x="70" y="210" class="subtitle">Polkadot Ecosystem: Cross-Consensus Communication</text>
+
+  <!-- Relay Chain (Center) -->
+  <rect x="600" y="240" width="200" height="80" class="relay-chain" rx="8"/>
+  <text x="700" y="265" text-anchor="middle" class="label" fill="white">RELAY CHAIN</text>
+  <text x="700" y="280" text-anchor="middle" class="tech-label" fill="white">Consensus Hub</text>
+  <text x="700" y="295" text-anchor="middle" class="tech-label" fill="white">Message Router</text>
+  <text x="700" y="310" text-anchor="middle" class="tech-label" fill="white">Security Provider</text>
+
+  <!-- Parachains -->
+  <rect x="150" y="240" width="150" height="70" class="parachain" rx="6"/>
+  <text x="225" y="265" text-anchor="middle" class="label" fill="white">PARACHAIN A</text>
+  <text x="225" y="280" text-anchor="middle" class="tech-label" fill="white">DeFi Protocol</text>
+  <text x="225" y="295" text-anchor="middle" class="tech-label" fill="white">State Machine</text>
+
+  <rect x="150" y="380" width="150" height="70" class="parachain" rx="6"/>
+  <text x="225" y="405" text-anchor="middle" class="label" fill="white">PARACHAIN B</text>
+  <text x="225" y="420" text-anchor="middle" class="tech-label" fill="white">NFT Platform</text>
+  <text x="225" y="435" text-anchor="middle" class="tech-label" fill="white">State Machine</text>
+
+  <rect x="1050" y="240" width="150" height="70" class="parachain" rx="6"/>
+  <text x="1125" y="265" text-anchor="middle" class="label" fill="white">PARACHAIN C</text>
+  <text x="1125" y="280" text-anchor="middle" class="tech-label" fill="white">Gaming Chain</text>
+  <text x="1125" y="295" text-anchor="middle" class="tech-label" fill="white">State Machine</text>
+
+  <!-- Smart Contracts -->
+  <rect x="380" y="380" width="140" height="60" class="smart-contract" rx="6"/>
+  <text x="450" y="405" text-anchor="middle" class="label" fill="white">SMART CONTRACT</text>
+  <text x="450" y="420" text-anchor="middle" class="tech-label" fill="white">EVM/WASM</text>
+  <text x="450" y="435" text-anchor="middle" class="tech-label" fill="white">Pallet Interface</text>
+
+  <!-- Bridge -->
+  <rect x="880" y="380" width="140" height="60" class="bridge" rx="6"/>
+  <text x="950" y="405" text-anchor="middle" class="label" fill="white">BRIDGE</text>
+  <text x="950" y="420" text-anchor="middle" class="tech-label" fill="white">External Chain</text>
+  <text x="950" y="435" text-anchor="middle" class="tech-label" fill="white">Bitcoin/Ethereum</text>
+
+  <!-- XCM Message Format Box -->
+  <rect x="50" y="480" width="600" height="160" class="format-box" rx="8"/>
+  <text x="70" y="505" class="subtitle" fill="#66BB6A">XCM Message Structure (Format, Not Protocol)</text>
+  
+  <!-- Message Components -->
+  <rect x="70" y="520" width="120" height="35" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="80" y="535" class="tech-label">VERSION</text>
+  <text x="80" y="545" class="tech-label">v3.0</text>
+  
+  <rect x="200" y="520" width="120" height="35" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="210" y="535" class="tech-label">INSTRUCTION</text>
+  <text x="210" y="545" class="tech-label">TransferAsset</text>
+  
+  <rect x="330" y="520" width="120" height="35" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="340" y="535" class="tech-label">ASSETS</text>
+  <text x="340" y="545" class="tech-label">DOT, KSM, etc.</text>
+  
+  <rect x="460" y="520" width="120" height="35" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="470" y="535" class="tech-label">DESTINATION</text>
+  <text x="470" y="545" class="tech-label">Target Chain</text>
+
+  <!-- Message Properties -->
+  <text x="70" y="580" class="tech-label">Message Properties:</text>
+  <text x="70" y="595" class="tech-label">• Describes intended state changes (not transactions)</text>
+  <text x="70" y="605" class="tech-label">• Transport-agnostic format</text>
+  <text x="70" y="615" class="tech-label">• Interpreted by target consensus system</text>
+  <text x="70" y="625" class="tech-label">• Programmable interface for state machine orchestration</text>
+
+  <!-- Message Flow Arrows -->
+  <!-- Parachain A to Relay Chain -->
+  <path d="M 300 275 Q 450 250 600 280" class="message-flow" marker-end="url(#xcm-arrow)"/>
+  <rect x="430" y="240" width="80" height="25" fill="url(#messagePattern)" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="470" y="255" text-anchor="middle" class="tech-label" fill="white">XCM MSG</text>
+
+  <!-- Relay Chain to Parachain C -->
+  <path d="M 800 280 Q 925 250 1050 275" class="message-flow" marker-end="url(#xcm-arrow)"/>
+  <rect x="900" y="240" width="80" height="25" fill="url(#messagePattern)" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="940" y="255" text-anchor="middle" class="tech-label" fill="white">XCM MSG</text>
+
+  <!-- Parachain B to Smart Contract -->
+  <path d="M 300 415 Q 340 400 380 410" class="message-flow" marker-end="url(#xcm-arrow)"/>
+  <rect x="320" y="395" width="80" height="25" fill="url(#messagePattern)" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="360" y="410" text-anchor="middle" class="tech-label" fill="white">XCM MSG</text>
+
+  <!-- Bridge to Parachain C (via Relay Chain) -->
+  <path d="M 950 380 Q 975 340 700 320" class="message-flow" marker-end="url(#xcm-arrow)"/>
+  <path d="M 700 320 Q 875 295 1050 305" class="message-flow" marker-end="url(#xcm-arrow)"/>
+
+  <!-- Asymmetric Response (Optional Feedback) -->
+  <path d="M 1050 305 Q 925 360 880 400" stroke="#FF9800" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#feedback-arrow)"/>
+  <text x="950" y="350" class="tech-label" fill="#FFB74D">Optional Feedback</text>
+  <text x="950" y="360" class="tech-label" fill="#FFB74D">(Separate Message)</text>
+
+  <!-- Transport Mechanisms -->
+  <rect x="700" y="480" width="650" height="160" fill="#2A2A2A" stroke="#BB86FC" stroke-width="2" rx="8"/>
+  <text x="720" y="505" class="subtitle" fill="#BB86FC">Transport Mechanisms (XCM Format ≠ Protocol)</text>
+  
+  <!-- Transport Types -->
+  <rect x="720" y="520" width="140" height="50" fill="#1A2A3D" stroke="#42A5F5" stroke-width="1" rx="3"/>
+  <text x="730" y="535" class="tech-label">XCMP</text>
+  <text x="730" y="545" class="tech-label">Cross-Chain</text>
+  <text x="730" y="555" class="tech-label">Message Passing</text>
+  
+  <rect x="880" y="520" width="140" height="50" fill="#3D1A2A" stroke="#F48FB1" stroke-width="1" rx="3"/>
+  <text x="890" y="535" class="tech-label">UMP/DMP</text>
+  <text x="890" y="545" class="tech-label">Upward/Downward</text>
+  <text x="890" y="555" class="tech-label">Message Passing</text>
+  
+  <rect x="1040" y="520" width="140" height="50" fill="#2A1A3D" stroke="#BA68C8" stroke-width="1" rx="3"/>
+  <text x="1050" y="535" class="tech-label">HRMP</text>
+  <text x="1050" y="545" class="tech-label">Horizontal Relay</text>
+  <text x="1050" y="555" class="tech-label">Message Passing</text>
+  
+  <rect x="1200" y="520" width="140" height="50" fill="#3D2A1A" stroke="#FFB74D" stroke-width="1" rx="3"/>
+  <text x="1210" y="535" class="tech-label">BRIDGE</text>
+  <text x="1210" y="545" class="tech-label">External Chain</text>
+  <text x="1210" y="555" class="tech-label">Communication</text>
+
+  <text x="720" y="590" class="tech-label">Transport Layer Properties:</text>
+  <text x="720" y="605" class="tech-label">• XCM defines message format/structure</text>
+  <text x="720" y="615" class="tech-label">• Transport protocols handle delivery mechanism</text>
+  <text x="720" y="625" class="tech-label">• Separation of concerns: Format vs. Delivery</text>
+
+  <!-- State Machine Orchestration -->
+  <rect x="50" y="670" width="1300" height="120" fill="#1A3D1A" stroke="#4CAF50" stroke-width="2" rx="8"/>
+  <text x="70" y="695" class="subtitle" fill="#66BB6A">Meta-Language for State Machine Orchestration</text>
+  
+  <!-- Orchestration Flow -->
+  <rect x="70" y="710" width="200" height="40" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="80" y="725" class="tech-label">1. INTENT DEFINITION</text>
+  <text x="80" y="735" class="tech-label">   State change description</text>
+  <text x="80" y="745" class="tech-label">   via XCM instructions</text>
+
+  <rect x="290" y="710" width="200" height="40" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="300" y="725" class="tech-label">2. MESSAGE FORMATTING</text>
+  <text x="300" y="735" class="tech-label">   Standardized XCM</text>
+  <text x="300" y="745" class="tech-label">   structure creation</text>
+
+  <rect x="510" y="710" width="200" height="40" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="520" y="725" class="tech-label">3. TRANSPORT SELECTION</text>
+  <text x="520" y="735" class="tech-label">   Protocol-specific</text>
+  <text x="520" y="745" class="tech-label">   delivery mechanism</text>
+
+  <rect x="730" y="710" width="200" height="40" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="740" y="725" class="tech-label">4. MESSAGE DELIVERY</text>
+  <text x="740" y="735" class="tech-label">   Guaranteed delivery</text>
+  <text x="740" y="745" class="tech-label">   (Absolute principle)</text>
+
+  <rect x="950" y="710" width="200" height="40" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="960" y="725" class="tech-label">5. INTERPRETATION</text>
+  <text x="960" y="735" class="tech-label">   Target system</text>
+  <text x="960" y="745" class="tech-label">   executes state change</text>
+
+  <rect x="1170" y="710" width="150" height="40" fill="#2A4A2A" stroke="#4CAF50" stroke-width="1" rx="3"/>
+  <text x="1180" y="725" class="tech-label">6. STATE UPDATE</text>
+  <text x="1180" y="735" class="tech-label">   Finalized on</text>
+  <text x="1180" y="745" class="tech-label">   target chain</text>
+
+  <!-- Flow arrows between orchestration steps -->
+  <path d="M 270 730 L 290 730" stroke="#4CAF50" stroke-width="2" marker-end="url(#xcm-arrow)"/>
+  <path d="M 490 730 L 510 730" stroke="#4CAF50" stroke-width="2" marker-end="url(#xcm-arrow)"/>
+  <path d="M 710 730 L 730 730" stroke="#4CAF50" stroke-width="2" marker-end="url(#xcm-arrow)"/>
+  <path d="M 930 730 L 950 730" stroke="#4CAF50" stroke-width="2" marker-end="url(#xcm-arrow)"/>
+  <path d="M 1150 730 L 1170 730" stroke="#4CAF50" stroke-width="2" marker-end="url(#xcm-arrow)"/>
+
+  <!-- Key Distinctions -->
+  <rect x="50" y="810" width="1300" height="70" fill="#2A2A2A" stroke="#FFD700" stroke-width="2" rx="5"/>
+  <text x="70" y="835" class="subtitle" fill="#FFD700">Key Distinctions &amp; Guarantees</text>
+  <text x="70" y="850" class="tech-label">FORMAT vs PROTOCOL: XCM defines message structure, not transport | MESSAGES ≠ TRANSACTIONS: Describes intended state changes</text>
+  <text x="70" y="860" class="tech-label">UNIVERSAL COMPATIBILITY: Works across any consensus system | PROGRAMMABLE INTERFACE: Standardized state machine orchestration</text>
+  <text x="70" y="870" class="tech-label">RELIABILITY: Asynchronous, Absolute, Asymmetric, Agnostic design ensures robust cross-chain communication</text>
+
+</svg>

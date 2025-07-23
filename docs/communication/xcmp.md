@@ -1,0 +1,46 @@
+# Cross-Chain Message Passing (XCMP)
+
+- While XCM defines the format of cross-consensus messages, Cross-Chain Message Passing (XCMP) is the actual "network-layer protocol" responsible for securely delivering XCM-formatted messages between parachains.
+- XCMP ensures secure and trustless state transitions and data exchange by leveraging Polkadot's unique Relay Chain architecture and its inherent economic security, without requiring additional trust assumptions.
+- This makes XCMP the engine for trustless state synchronization between parachain state machines.
+
+## 1. Message Provenance and Queuing Mechanisms
+
+- Unlike traditional transactions that rely on digital signatures for proving origin, messages within XCMP establish their provenance through Polkadot's internal Byzantine-resistant cryptoeconomic validation infrastructure.
+- This mechanism is conceptually similar to how inter-contract message passing operates within Ethereum.
+
+- For message flow, every parachain block has the capability to produce a list of messages, known as "egress queues," which are destined for other blocks.
+- Once a message is routed, it enters the "ingress queue" of the receiving parachain.
+- A fundamental requirement for parachains is to process these ingress lists in strict order, ensuring sequential and consistent message handling.
+
+## 2. Data Availability and Consistent History via Nested Merkle Trees
+
+- XCMP, in conjunction with GRANDPA finalization, plays a crucial role in guaranteeing data availability for cross-chain messages.
+- To achieve this, all validators are mandated to hold erasure-coded pieces of parachain messages.
+- Notably, only one-third of these pieces are sufficient to reconstruct and recover any given message.
+- Finality in the system requires that these erasure-coded pieces have been received by the voting validators; failure to do so results in penalties.
+- This mechanism ensures that at least two-thirds of the erasure-coded pieces are available once finality is reached, thereby guaranteeing that a finalized message is also available for all participants.
+
+- To maintain a consistent history of messages across parachains efficiently, XCMP employs "nested Merkle trees".
+- The header of a parachain block, when it corresponds to sent messages, contains a single "message root hash."
+- This hash is the root of a Merkle tree, where the leaves are themselves the heads of hash chains of messages flowing from one parachain to another.
+- This intricate structure allows for the verification of all messages sent from one parachain to another using only this single root hash.
+- Collators, responsible for proposing parachain blocks, can construct a complex proof (comprising many hashes) to demonstrate that they acted upon the correct messages.
+- This proof involves first showing that the message root was indeed included in the Relay Chain and then providing a specific proof that these were the messages derived from that message root hash.
+- This reliance on cryptoeconomic validation for provenance, erasure coding for data availability, and nested Merkle trees for consistent history provides a robust, low-level mechanism for ensuring that cross-chain state transitions are secure and verifiable without relying on external bridges or trusted intermediaries. This is a direct implementation of the "shared state" concept at the messaging layer.
+
+## 3. Input/Output Validation for State Transitions
+
+- The integrity of state transitions within parachains, particularly those influenced by cross-chain messages, is rigorously enforced through a "parachain state-transition verification function" (STVF).
+- This STVF, implemented as a piece of WebAssembly code, is designed to verify that all input messages received by the parachain are correctly acted upon during its state transition.
+
+- The validation function performs a comprehensive check by relating the new state of the parachain, any output messages it generates, the previous state digest, the current parachain block data, and all input messages that have been faithfully routed from other parachains or the Relay Chain.
+- This meticulous validation process ensures that every state change on a parachain, influenced by external messages, is consistent and adheres to its defined logic.
+
+## 4. Trustlessness and Consistency
+
+- A fundamental design goal of XCMP is to achieve trustlessness.
+- Because the same set of validators secures both the sending and receiving parachains, and these validators collectively guarantee correct message passing, XCMP requires no more trust than would be necessary for a single blockchain.
+- This shared security model inherently extends trust across the network.
+- Furthermore, XCMP provides an absolute guarantee that received messages are precisely those that were sent, even in the event of chain reorganizations, thereby ensuring strong consistency across the interconnected state machines.
+- The correct ordering for messages generated by parachain blocks is also guaranteed by this Input/Output validation process.
